@@ -1,3 +1,5 @@
 primo-explore/custom/
 primo-explore/tmp/
 .idea/
+package-lock.json
+primo-explore-devenv.iml
