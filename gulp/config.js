@@ -129,7 +129,7 @@ function customNpmCssPath() {
 
 
 
-const SERVERS = {
+var SERVERS = {
     local: 'http://localhost:8002'
 };
 
@@ -141,7 +141,7 @@ const SERVERS = {
  *   var PROXY_SERVER = 'http://abc-primo.hosted.exlibrisgroup.com'
  *   var PROXY_SERVER = 'https://abc-primo.hosted.exlibrisgroup.com:443'
  */
-const PROXY_SERVER = 'https://alliance-primo-sb.hosted.exlibrisgroup.com:443';
+var PROXY_SERVER = 'https://alliance-primo-sb.hosted.exlibrisgroup.com:443';
 
 
 let buildParams = {

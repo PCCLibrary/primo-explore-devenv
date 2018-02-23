@@ -54,12 +54,25 @@ Example:
 
 ##Recipes/Examples:
 
+# Note:
+
+The examples below use the back tic '`' for templates - which will work using babel (Documentation on how to do so will be shared)
+This causes the examples to fail on IE11 browsers.
+
+To solve this you can replace the '`' with regular apostrophe ("'") and use a single line tempalate (less readable but works just as well).
+
+
+
 
 # JavaScript Recipe 1 - a Static `hello world` html Message
 
 
 -  Use the `showDirectives` (located in the root directory of this package is the showDirectives.txt file
 , just add the content of the file as a bookmark to your browser) scriplet to identify the `prmSearchBarAfter` directive which you will plugin to
+
+
+![Show Directives image](../../help_files/showDirectives.png "Show Directives Changes")
+
 -  Edit the primo-explore/custom/js/custom.js file and add a component declaration for the `prmSearchBarAfter` directive
 
     ```
@@ -79,7 +92,7 @@ Example:
 
 -  Save and refresh your browser
 
-
+![Hello World image](../../help_files/js1.png "Hello World  Changes")
 
 # JavaScript Recipe 2 - a Dynamic Directive
 -  Use the `showDirectives` scriplet to identify the `prmSearchBarAfter` directive which you will plugin to
@@ -88,12 +101,18 @@ Example:
     angular.reloadWithDebugInfo()
 ```
 -  Focus on the `prmSearchBarAfter` directive
+
+![Focus image](../../help_files/js2.png "Focus")
+
 -  Run the following command in your browsers' console tab:
 ```
-    angular.element($0).scope().ctrl
+    angular.element($0).scope().$ctrl (angular.element($0).scope().ctrl in version earlier than February 2017)
 ```
 
 - Review the properties of the directive to decide which data elements can be used, avoid methods/functions as they wont be backwards compatible
+
+![properties image](../../help_files/js3.png "properties")
+
 
 - Edit  primo-explore/custom/js/custom.js file and add a component declaration for the `prmSearchBarAfter` directive
 
@@ -103,15 +122,17 @@ Example:
 ```
 - Add a controller definition:
 ```
-    controller: 'SearchAfterController',
+    controller: 'SearchBarAfterController',
 ```
 - Define a controller with 2 getter methods to return the query and selected scope
 ```
 app.controller('SearchBarAfterController', [function () {
         var vm = this;
 
+
         vm.getSelectdScope = getSelectdScope;
         vm.getQuery = getQuery;
+
 
         function getSelectdScope() {
             return vm.parentCtrl.scopeField;
@@ -120,10 +141,12 @@ app.controller('SearchBarAfterController', [function () {
         function getQuery() {
             return vm.parentCtrl.mainSearchField;
         }
+    }]);
 
 ```
 -  Edit the directive template to reference the getter methods
-``` <div layout="row" layout-align="center center">
+```
+template: `<div layout="row" layout-align="center center">
                          <md-card flex="80">
                          <md-card-title>
                              <md-card-title-text><span class="md-headline">
@@ -141,13 +164,18 @@ app.controller('SearchBarAfterController', [function () {
                              <md-button>Action 2</md-button>
                          </md-card-actions>
                          </md-card>
-                     </div>
+                     </div>`
+
   ```
 -  Save and refresh your browser
 
+![dynamic example image](../../help_files/js4.png "dynamic example")
 
 # JavaScript Recipe 3 - Adding the Altmetrics Widget
 -  Use the `showDirectives` scriplet to identify the `prmFullViewAfter` directive which you will plugin to
+
+![Altmetrics example image](../../help_files/js5.png "Altmetrics example")
+
 -  Run the following command in your browsers' console tab:
 `angular.reloadWithDebugInfo()`
 -  Focus on the `prmFullViewAfter` directive
@@ -156,14 +184,25 @@ app.controller('SearchBarAfterController', [function () {
 
 - Review the properties of the directive to decide which data elements can be used, avoid methods/functions as they wont be backwards compatible
 
+![Altmetrics example 2 image](../../help_files/js6.png "Altmetrics 2 example")
+
 - Edit  primo-explore/custom/js/custom.js file and add a component declaration for the `prmFullViewAfter` directive
 
 - Add a binding definition the input parentCtrl
-`bindings: {parentCtrl: '<'},`
+
+```
+    bindings: {parentCtrl: '<'},
+```
 - Add a controller definition:
-`controller: 'FullViewAfterController',`
+
+```
+    controller: 'FullViewAfterController',
+```
+
 - Define a controller that populates the doi and loads the Altmetrics js file
-```app.controller('FullViewAfterController', ['angularLoad', function (angularLoad) {
+
+```
+app.controller('FullViewAfterController', ['angularLoad', function (angularLoad) {
         var vm = this;
         vm.doi = vm.parentCtrl.item.pnx.addata.doi[0] || '';
 
@@ -174,8 +213,13 @@ app.controller('SearchBarAfterController', [function () {
         };
     }]);
 ```
-- Edit the directive template to add the Altmetrics div and bind the data-doi attribure to the controller
-```<div class="full-view-section-content" ng-if="$ctrl.doi">
+- Edit the directive template to add the Altmetrics div and bind the data-doi attribute to the controller
+```
+app.component('prmFullViewAfter', {
+        bindings: {parentCtrl: '<'},
+        controller: 'FullViewAfterController',
+        template: `<div class="full-view-section loc-altemtrics" flex-md="65" flex-lg="65" flex-xl="65" flex>
+                    <div class="layout-full-width full-view-section-content" ng-if="$ctrl.doi">
                     <div class="section-header" layout="row" layout-align="center center">
                         <h2 class="section-title md-title light-text">
                             Social Popularity Statistics (AltMetrics) :
@@ -194,6 +238,20 @@ app.controller('SearchBarAfterController', [function () {
                            </div>
                         </div>
                     </div>
+                    </div>`
+    });
    ```
+
+-  Edit the custom1.css file and add the following definitions:
+
+ ```
+ .full-view-section.loc-altemtrics{
+     background-color: #f3f3f3;
+     margin-top:0px;
+     padding-left: 3em;
+ }
+ ```
+
 -  Save and refresh your browser
 
+![Altmetrics example 3 image](../../help_files/js7.png "Altmetrics 3 example")
