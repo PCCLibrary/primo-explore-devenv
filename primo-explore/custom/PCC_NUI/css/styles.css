@@ -208,6 +208,7 @@ toggle-institutions button.md-button:not([disabled]).md-raised:active
 	text-decoration: none;
 	text-shadow: none;
 	transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    box-shadow: none;
 }
 
 toggle-institutions button.md-button {

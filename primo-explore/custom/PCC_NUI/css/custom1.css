@@ -202,12 +202,13 @@ toggle-institutions button.md-button:active,
 toggle-institutions button.md-button:focus,
 toggle-institutions button.md-button:hover,
 toggle-institutions button.md-button:not([disabled]).md-fab:active,
-toggle-institutions button.md-button:not([disabled]).md-raised:active 
+toggle-institutions button.md-button:not([disabled]).md-raised:active
 {
 	background-color: #0088a4;
 	text-decoration: none;
 	text-shadow: none;
 	transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    box-shadow: none;
 }
 
 toggle-institutions button.md-button {
@@ -250,11 +251,6 @@ prm-logo-after div.product-logo-local a:hover,
 prm-logo-after div.product-logo-local a:active {
   box-shadow: none !important;
   background-color: inherit !important;
-}
-
-/* Hide out-of-the-box no search results card */
-prm-no-search-result > md-card.default-card {
-  display: none;
 }
 
 .chat-tab, .chat-frame-wrap{
@@ -308,6 +304,11 @@ prm-no-search-result > md-card.default-card {
   body.md-dialog-is-showing .chat-bottom-padding {
     bottom: 0 !important;
   }
+}
+
+/* Hide out-of-the-box no search results card */
+prm-no-search-result > md-card.default-card {
+  display: none;
 }
 
 /*
