@@ -95,9 +95,15 @@ prm-topbar .md-button:focus:not([disabled]) {
 	}
 	
 /*Icon color theme*/
-prm-icon md-icon, prm-icon md-icon.md-primoExplore-theme {
+prm-icon md-icon,
+prm-icon md-icon.md-primoExplore-theme {
     color: #395575 !important;
 	}
+
+button.close-button > prm-icon md-icon,
+button.close-button > prm-icon md-icon.md-primoExplore-theme {
+	color: #ffffff !important;
+}
 
 /*Results loading icon*/
 .diamond {
@@ -189,8 +195,8 @@ toggle-institutions button.md-button{
 	line-height: 1;
 	text-align: center;
 	cursor: pointer;
-	background-color: #0088a4;
-	color: #ffffff;
+	/*background-color: #0088a4;*/
+	/*color: #ffffff;*/
 	border-radius: 4px;
 	margin: 1em 0;
 	text-decoration: none;
@@ -204,7 +210,7 @@ toggle-institutions button.md-button:hover,
 toggle-institutions button.md-button:not([disabled]).md-fab:active,
 toggle-institutions button.md-button:not([disabled]).md-raised:active
 {
-	background-color: #0088a4;
+	/*background-color: #0088a4;*/
 	text-decoration: none;
 	text-shadow: none;
 	transition: background-color 0.25s ease-out, color 0.25s ease-out;
@@ -213,6 +219,16 @@ toggle-institutions button.md-button:not([disabled]).md-raised:active
 
 toggle-institutions button.md-button {
 	width: 210px;
+}
+
+input[type='submit'].submitAsLink {
+	background-color: #0088a4;
+	color: #ffffff;
+}
+
+toggle-institutions button.md-button {
+	background-color: #d5eaee;
+	color: #0088a4;
 }
 
 
@@ -233,6 +249,15 @@ prm-page-nav-menu {
 	z-index: 11;
 	bottom: 7em;
 	left: 0;
+}
+
+.md-button._md-focused:not([disabled]),
+.md-button.hovered:not([disabled]),
+.md-button.md-focused:not([disabled]),
+.md-button:focus:not([disabled]),
+.md-button:hover:not([disabled]) {
+	color: #080606;
+	background-color: rgba(57,85,117,.5);
 }
 /* Create clickable logo */
 prm-logo div.product-logo {

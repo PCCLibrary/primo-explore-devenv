@@ -4,7 +4,7 @@ export let searchBarSubMenuItemsConfig = {
     {
       name: "Provide Feedback",
       description: "Provide Feedback",
-      action: "https://docs.google.com/forms/d/e/1FAIpQLSeWpIktFnYNDZqeN2O_EODmVtkis0hoaRMXhqVcBeXTVIsiag/viewform?",
+      action: "https://www.pcc.edu/library/about/people/contact/report-issues/",
       icon: {
         set: 'communication',
         icon: 'ic_forum_24px'

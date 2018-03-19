@@ -8,7 +8,7 @@ export let customActionsConfig = {
                 set: 'communication',
                 name: 'ic_forum_24px'
             },
-            action: "https://docs.google.com/forms/d/e/1FAIpQLSeWpIktFnYNDZqeN2O_EODmVtkis0hoaRMXhqVcBeXTVIsiag/viewform?"
+            action: "https://www.pcc.edu/library/about/people/contact/report-issues/"
         }
     ]
 };
