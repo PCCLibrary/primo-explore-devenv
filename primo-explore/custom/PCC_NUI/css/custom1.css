@@ -259,6 +259,97 @@ prm-page-nav-menu {
 	color: #080606;
 	background-color: rgba(57,85,117,.5);
 }
+
+/** hide left navigation in item view */
+
+.services-index-under.hide-xs {
+	display: none;
+	visibility: hidden;
+}
+
+
+.saved-query-list>md-nav-bar .md-nav-item,
+prm-action-list>md-nav-bar .md-nav-item {
+	max-width: 100%;
+}
+
+/** change container layout
+ */
+
+/** modal view **/
+md-dialog-content .full-view-container {
+	padding: 2em 2em 0;
+}
+
+
+/** full view **/
+
+.full-view-section-content {
+	background-color: #fff;
+}
+
+/** remove padding from item view sections and break up page into sections */
+
+prm-brief-result-container {
+	background-color: #fff;
+}
+
+.full-view-section-content {
+	padding: 1.5em;
+}
+
+.__gt-xs .full-view-section-content {
+	padding: 2em;
+}
+
+.full-view-section {
+	padding: 0;
+	margin-bottom: 2.5em;
+	margin-top: 0;
+}
+
+
+
+.full-view-inner-container {
+
+	background-color: transparent;
+	padding: 0;
+
+}
+
+#action_list {
+	padding-bottom: 0;
+	margin-bottom: 0 !important;
+}
+
+#action_list prm-full-view-service-container {
+	padding: 0.5em;
+	background: #fafafa;
+	border: 2px solid #e0e0e0;
+}
+
+#action_list md-divider {
+	border: 0;
+}
+
+
+/** account area */
+
+prm-personal-info md-card.default-card:last-child {
+	display: none;
+	visibility: hidden;
+}
+
+prm-personal-info md-card-content md-divder.card-divider.margin-bottom-medium.layout-margin {
+	display: none;
+	visibility: hidden;
+}
+
+prm-personal-info .card-content-section.layout-full-width.layout-wrap.layout-align-start-start.layout-row:last-of-type {
+	display: none;
+	visibility: hidden;
+}
+
 /* Create clickable logo */
 prm-logo div.product-logo {
   display:none;
