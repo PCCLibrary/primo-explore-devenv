@@ -1,0 +1,442 @@
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "sidebar";
+@import "buttons";
+@import "menubars";
+@import "actionlist";
+
+
+
+md-toolbar {
+  * {
+    color: $white;
+  }
+  *::after {
+    color: $white;
+  }
+  *::before {
+    color: $white;
+  }
+}
+
+prm-topbar {
+  height: 70px;
+
+  prm-logo {
+    max-width: 250px;
+    min-width: 150px;
+    img.logo-image {
+      max-height: 25px;
+
+      @include sm {
+        max-height: 30px;
+      }
+
+      @include md {
+        max-height: 40px;
+      }
+
+      @include lg {
+        max-height: 50px;
+      }
+    }
+  }
+
+  .top-nav-bar {
+    background-color: $color_teal;
+  }
+
+  /** toolbar */
+
+  md-toolbar {
+    background-color: $color_teal !important;
+
+  }
+
+}
+
+
+
+prm-user-area {
+  md-fab-toolbar {
+    .md-fab-action-item {
+      .md-button {
+        &:hover:not([disabled]) {
+          color: $white;
+        }
+        &:focus:not([disabled]) {
+          color: $white;
+        }
+      }
+      md-input-container {
+        &:hover:not([disabled]) {
+          color: $white;
+        }
+        &:focus:not([disabled]) {
+          color: $white;
+        }
+      }
+    }
+    ._md-fab-action-item {
+      .md-button {
+        &:hover:not([disabled]) {
+          color: $white;
+        }
+        &:focus:not([disabled]) {
+          color: $white;
+        }
+      }
+      md-input-container {
+        &:hover:not([disabled]) {
+          color: $white;
+        }
+        &:focus:not([disabled]) {
+          color: $white;
+        }
+      }
+    }
+  }
+  .user-menu-button .user-name {
+    color: $white;
+  }
+  .md-button.user-menu-button {
+    &:hover:not([disabled]) {
+      color: $white;
+    }
+    &:focus:not([disabled]) {
+      color: $white;
+    }
+  }
+}
+md-toolbar.default-toolbar {
+  * {
+    color: $color_dark_blue;
+  }
+  *::after {
+    color: $color_dark_blue;
+  }
+  *::before {
+    color: $color_dark_blue;
+  }
+}
+
+.hoverable-over-dark {
+  &:hover:not([disabled]) {
+    color: $white;
+  }
+  &:focus:not([disabled]) {
+    color: $white;
+  }
+}
+
+prm-main-menu[menu-type="full"] {
+  .md-button {
+    md-select {
+      &:hover:not([disabled]):focus {
+        color: $white;
+      }
+      &:focus:not([disabled]) {
+        color: $white;
+      }
+    }
+    &:hover:not([disabled]) {
+      color: $white;
+    }
+    .md-input-container-dummy > .md-select-dummy {
+      &:hover:not([disabled]):focus {
+        color: $white;
+      }
+      &:focus:not([disabled]) {
+        color: $white;
+      }
+    }
+    &:focus:not([disabled]) {
+      color: $white;
+    }
+  }
+  .overlay-menu-item {
+    md-select {
+      &:hover:not([disabled]):focus {
+        color: $white;
+      }
+      &:focus:not([disabled]) {
+        color: $white;
+      }
+    }
+    &:hover:not([disabled]) {
+      color: $white;
+    }
+    .md-input-container-dummy > .md-select-dummy {
+      &:hover:not([disabled]):focus {
+        color: $white;
+      }
+      &:focus:not([disabled]) {
+        color: $white;
+      }
+    }
+    &:focus:not([disabled]) {
+      color: $white;
+    }
+  }
+  md-card {
+    &:hover:not([disabled]) {
+      color: $white;
+    }
+    &:focus:not([disabled]) {
+      color: $white;
+    }
+  }
+}
+
+
+.diamond {
+  background-color: $color_yellow !important;
+}
+
+prm-search-bar {
+  background-color: $color_dark_blue;
+  .search-switch-buttons .md-button.switch-to-simple {
+    color: $white;
+  }
+}
+.sidebar-header {
+  color: $color_medium_blue;
+}
+.section-title-header {
+  color: $color_medium_blue;
+}
+.bar {
+  prm-authentication {
+    .md-button.link-alt-color {
+      background-color: transparent;
+      color: $color_teal;
+    }
+    .section-title prm-icon.md-button {
+      background-color: transparent;
+      color: $color_teal;
+    }
+  }
+  &.alert-bar {
+    border-color: $color_light_blue;
+    background-color: $color_light_blue;
+  }
+}
+.section-title {
+
+  font-weight: 600;
+    color: $color_medium_blue !important;
+    text-transform: uppercase;
+
+  .bar prm-authentication prm-icon.md-button {
+    background-color: transparent;
+    color: $color_teal;
+  }
+  prm-icon.md-button.button-as-link {
+    background-color: transparent;
+    color: $color_teal;
+  }
+}
+
+[aria-label="Tags"] {
+  display: none;
+}
+#tags {
+  display: none;
+}
+.prm-alert-border {
+  border-color: $color_light_blue;
+  background-color: $color_light_blue;
+}
+.__gt-xs {
+  prm-page-nav-menu {
+    left: 3em;
+  }
+  .full-view-section-content {
+    padding: 2em;
+  }
+}
+
+prm-page-nav-menu {
+  position: fixed;
+  z-index: 11;
+  bottom: 7em;
+  left: 0;
+}
+.full-view-section-content {
+  background-color: $white;
+  padding: 1.5em;
+}
+
+prm-brief-result-container {
+  background-color: $white;
+}
+.full-view-section {
+  padding: 0;
+  margin-bottom: 2.5em;
+  margin-top: 0;
+}
+.full-view-inner-container {
+  background-color: transparent;
+  padding: 0;
+}
+
+
+prm-personal-info {
+  md-card.default-card:last-child {
+    display: none;
+    visibility: hidden;
+  }
+  md-card-content md-divder.card-divider.margin-bottom-medium.layout-margin {
+    display: none;
+    visibility: hidden;
+  }
+  .card-content-section.layout-full-width.layout-wrap.layout-align-start-start.layout-row:last-of-type {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+
+
+.multiselect-facet-group {
+
+  prm-facet-exact {
+
+    .section-content {
+      .md-chips {
+        .md-chip {
+          .facet-title {
+            line-height: 1.25em;
+          }
+        }
+      }
+
+      &.multiselect-inactive .md-chip md-checkbox {
+        transform: scaleX(1);
+      }
+
+    }
+  }
+}
+
+
+prm-main-menu[menu-type="menu"] .md-button {
+  color: $white;
+}
+prm-icon md-icon {
+  color: $color_medium_blue;
+  &.md-primoExplore-theme {
+    color: $color_medium_blue;
+  }
+}
+button.close-button {
+  background-color: $color_dark_blue;
+    prm-icon md-icon {
+    color: $white !important;
+      &.md-primoExplore-theme {
+        color: $white !important;
+      }
+    }
+}
+
+prm-brief-result .item-title {
+  color: $color_medium_blue;
+}
+.advanced-search-backdrop.visible {
+  background-color: $color_dark_blue;
+}
+h2.sidebar-title {
+  font-weight: 600;
+  color: $color_dark_teal;
+}
+.classic-input .search-scope {
+  border-color: $color_light_blue;
+  background-color: $color_light_blue;
+}
+input[type='submit'].submitAsLink {
+  @extend %button;
+  background-color: $color_teal;
+  color: $white;
+  &:hover {
+    @extend %nodecoration;
+  }
+}
+toggle-institutions button.md-button {
+  @extend %button;
+  width: 210px;
+  background-color: $color_light_blue;
+  color: $color_teal;
+  &:active {
+    @extend %nodecoration;
+  }
+  &:focus {
+    @extend %nodecoration;
+  }
+  &:hover {
+    @extend %nodecoration;
+  }
+  &:not([disabled]) {
+    &.md-fab:active {
+      @extend %nodecoration;
+    }
+    &.md-raised:active {
+      @extend %nodecoration;
+    }
+  }
+  &.md-raised:not([disabled]) {
+    @extend %nodecoration;
+  }
+}
+.__gt-md prm-page-nav-menu {
+  bottom: 5em;
+  left: 1em;
+}
+.__gt-sm prm-page-nav-menu {
+  bottom: 4em;
+}
+.services-index-under.hide-xs {
+  display: none;
+  visibility: hidden;
+}
+
+prm-action-list,
+.saved-query-list {
+
+  md-nav-bar .md-nav-item {
+    @extend %maxwidth100;
+  }
+
+}
+
+.md-dialog-container {
+  background-color: $color_trans_gray;
+}
+
+md-dialog.light-on-dark-dialog {
+  background-color: $color_medium_blue;
+}
+
+md-dialog-content .full-view-container {
+  padding: 2em 2em 0;
+}
+
+/** reduce weight of other libraries text **/
+prm-alma-more-inst h3.medium-uppercase-bold {
+  font-weight: 400;
+}
+
+/** remove sidebar 'refine my results' **/
+.sidebar-section.compensate-padding-left h2.sidebar-title {
+  display: none;
+}
+
+.section-title.layout-align-start-center.layout-row {
+  display: none;
+}
+
+/* remove hover color from link-styled buttons */
+.md-button.neutralized-button:hover {
+  background-color: transparent;
+}
+

@@ -23,51 +23,65 @@ let app = angular.module('viewCustom', [
                                         'toggleInstitutions',
                                         'customActions',
                                         'customNoSearchResults',
-                                        'externalSearch',
                                         'linksInProfile',
-                                        'libraryAccountQuestions'
+                                        'libraryAccountQuestions',
+                                        'externalSearch'
                                       ]);
 
 app
-    .constant(customActionsConfig.name, customActionsConfig.config)
-    .constant(clickableLogoLinkConfig.name, clickableLogoLinkConfig.config)
-    .constant(libraryh3lpWidgetConfig.name, libraryh3lpWidgetConfig.config)
-    .constant(searchBarSubMenuItemsConfig.name, searchBarSubMenuItemsConfig.config)
-    .value('customNoSearchResultsTemplateUrl', 'custom/'+viewName+'/html/noSearchResults.html')
-    .component('prmSearchBarAfter', {
+  .constant(customActionsConfig.name, customActionsConfig.config)
+  .constant(clickableLogoLinkConfig.name, clickableLogoLinkConfig.config)
+  .constant(libraryh3lpWidgetConfig.name, libraryh3lpWidgetConfig.config)
+  .constant(searchBarSubMenuItemsConfig.name, searchBarSubMenuItemsConfig.config)
+  .value('customNoSearchResultsTemplateUrl', 'custom/'+viewName+'/html/noSearchResults.html')
+  .component('prmSearchBarAfter', {
     template: '<search-bar-sub-menu></search-bar-sub-menu>'
-    })
-    .component('prmAlmaMoreInstAfter', {template: '<toggle-institutions />'})
-    .value('searchTargets', [{
+  })
+  .component('prmAlmaMoreInstAfter', {template: '<toggle-institutions />'})
+    .value('searchTargets', [
+        {
         "name": "Worldcat",
         "url": "https://pcc.on.worldcat.org/search?",
         "img": "https://raw.githubusercontent.com/alliance-pcsg/primo-explore-external-search/master/worldcat-logo.png",
-        mapping: function (queries, filters) {
-            const query_mappings = {
-                'any': 'kw',
-                'title': 'ti',
-                'creator': 'au',
-                'subject': 'su',
-                'isbn': 'bn',
-                'issn': 'n2'
+            mapping: function (queries, filters) {
+                const query_mappings = {
+                    'any': 'kw',
+                    'title': 'ti',
+                    'creator': 'au',
+                    'subject': 'su',
+                    'isbn': 'bn',
+                    'issn': 'n2'
+                }
+                try {
+                    return 'queryString=' + queries.map(part => {
+                        let terms = part.split(',')
+                        let type = query_mappings[terms[0]] || 'kw'
+                        let string = terms[2] || ''
+                        let join = terms[3] || ''
+                        return type + ':' + string + ' ' + join + ' '
+                    }).join('')
+                }
+                catch (e) {
+                    return ''
+                }
             }
-            try {
-                return 'queryString=' + queries.map(part => {
-                    let terms = part.split(',')
-                    let type = query_mappings[terms[0]] || 'kw'
-                    let string = terms[2] || ''
-                    let join = terms[3] || ''
-                    return type + ':' + string + ' ' + join + ' '
-                }).join('')
-            }
-            catch (e) {
-                return ''
-            }
-        }
-    },
+        },
         {
             "name": "Google Scholar",
             "url": "https://scholar.google.com/scholar?q=",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/200px-Google_%22G%22_Logo.svg.png",
+            mapping: function (queries, filters) {
+                try {
+                    return queries.map(part => part.split(",")[2] || "").join(' ')
+                }
+                catch (e) {
+                    return ''
+                }
+            }
+        },
+        {
+            "name": "EBSCO Search",
+            "url": "https://libproxy.pcc.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&site=ehost-live&scope=site&type=1&db=aph&db=f5h&mode=bool&lang=en&cli0=FT&clv0=Y&bquery=",
             "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/200px-Google_%22G%22_Logo.svg.png",
             mapping: function (queries, filters) {
                 try {

@@ -1,16 +1,16 @@
 angular
 // Name our module
     .module('linksInProfile', [])
-    .controller('linksInProfileController', ['$scope', function( $scope ) {
-        this.$onInit = () => {
-            $scope.parentCtrl = this.parentCtrl;
-        }
-    }])
+    // .controller('linksInProfileController', ['$scope', function( $scope ) {
+    //     this.$onInit = () => {
+    //         $scope.parentCtrl = this.parentCtrl;
+    //     }
+    // }])
     .component('prmFinesAfter', {
         bindings: {
             parentCtrl: '<'
         },
-        controller: 'linksInProfileController',
+        // controller: 'linksInProfileController',
         template: `
               
               <div class="layout-row"><a

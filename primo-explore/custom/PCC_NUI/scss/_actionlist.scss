@@ -1,0 +1,111 @@
+%actionbutton {
+
+  background-color: transparent !important;
+  color: $color_dark_blue !important;
+
+  @include hover {
+
+    color: $black !important;
+    background-color: $color_trans_gray !important;
+
+  }
+
+}
+
+#action_list {
+  padding-bottom: 0;
+  margin-bottom: 0 !important;
+
+  .full-view-section-content {
+    padding: 1em 2em 0em 2em;
+
+    prm-full-view-service-container {
+      padding: 0.5em;
+      background: $color_silver;
+      border: none;
+      display: flex;
+      justify-content: space-between;
+
+      .section-head {
+        margin: 0;
+        padding: 0;
+
+        h4.section-title {
+          margin-top: 20px;
+          font-size: 12px;
+          color: #999 !important;
+        }
+
+      }
+      .section-body {
+        margin: 0;
+        padding: 0;
+
+
+        prm-action-list {
+
+          .md-nav-bar {
+
+            ul._md-nav-bar-list {
+
+              li.md-nav-item {
+
+                button.md-button {
+
+                 @extend %actionbutton;
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+  }
+  md-divider {
+    border: 0;
+  }
+}
+
+.action-list-content {
+
+  md-content {
+    background: $color_silver;
+
+    .md-nav-bar {
+
+      nav {
+
+        ul {
+
+          li.md-nav-item {
+
+            button.md-button,
+            button.pin-button {
+
+              opacity: 1;
+              @extend %actionbutton;
+
+            }
+
+          }
+
+        }
+
+      }
+    }
+
+  }
+}
+
+.result-item-actions {
+  button.md-button {
+    @extend %actionbutton;
+  }
+}

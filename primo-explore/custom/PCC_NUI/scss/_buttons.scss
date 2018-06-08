@@ -1,0 +1,85 @@
+%sm_button_padding {
+  padding:.6em .35em .3em .35em !important;
+}
+
+.md-button {
+
+  &:hover:not([disabled]) {
+    color: $white;
+  }
+  &:focus:not([disabled]) {
+    color: $white;
+  }
+
+  &.button-over-dark {
+    &:hover:not([disabled]) {
+      color: $white;
+    }
+    &:focus:not([disabled]) {
+      color: $white;
+    }
+  }
+  &.button-confirm {
+    color: $white;
+    background-color: $color_teal;
+    &:hover:not([disabled]) {
+      color: $white;
+      background-color: $color_dark_teal;
+    }
+    &:focus:not([disabled]) {
+      color: $white;
+      background-color: $color_dark_teal;
+    }
+    &.hovered:not([disabled]) {
+      color: $white;
+      background-color: $color_dark_teal;
+    }
+    &.md-focused:not([disabled]) {
+      color: $white;
+      background-color: $color_dark_teal;
+    }
+    &._md-focused:not([disabled]) {
+      color: $white;
+      background-color: $color_dark_teal;
+    }
+  }
+  &.button-as-link.link-alt-color {
+    background-color: transparent;
+    color: $color_teal;
+  }
+  &._md-focused:not([disabled]) {
+    color: $color_dark_gray;
+    background-color: $color_trans_gray;
+  }
+  &.hovered:not([disabled]) {
+    color: $color_dark_gray;
+    background-color: $color_trans_gray;
+  }
+  &.md-focused:not([disabled]) {
+    color: $color_dark_gray;
+    background-color: $color_trans_gray;
+  }
+  &:focus:not([disabled]) {
+    color: $color_dark_gray;
+    background-color: $color_trans_gray;
+  }
+  &:hover:not([disabled]) {
+    color: $color_dark_gray;
+    background-color: $color_trans_gray;
+  }
+}
+
+/* sign-in buttons */
+prm-authentication {
+  button.md-button[aria-label="Sign in"] {
+    @extend %primary_button;
+    @extend %sm_button_padding;
+
+    span[translate="getit.signin_link.sign_in"] {
+      @extend %sm_button_padding;
+    }
+  }
+
+}
+
+

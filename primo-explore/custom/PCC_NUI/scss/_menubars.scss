@@ -1,0 +1,32 @@
+search-bar-sub-menu {
+
+  button.md-button {
+
+      color: $color_dark_blue;
+
+        @include hover {
+          @extend %linkhover;
+          background-color: $color_trans_gray !important;
+        }
+
+        &.md-focused {
+          @extend %linkhover;
+        }
+
+      }
+
+}
+
+
+
+
+/** back to search results */
+
+prm-back-to-search-results-button {
+
+    button.md-button {
+      background-color: transparent !important;
+      font-weight: 600 !important;
+    }
+
+}
