@@ -42,7 +42,7 @@ app
         {
         "name": "Worldcat",
         "url": "https://pcc.on.worldcat.org/search?",
-        "img": "https://raw.githubusercontent.com/alliance-pcsg/primo-explore-external-search/master/worldcat-logo.png",
+        "img": "https://www.pcc.edu/library/primo/images/worldcat-logo.png",
             mapping: function (queries, filters) {
                 const query_mappings = {
                     'any': 'kw',
@@ -69,7 +69,7 @@ app
         {
             "name": "Google Scholar",
             "url": "https://scholar.google.com/scholar?q=",
-            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/200px-Google_%22G%22_Logo.svg.png",
+            "img": "https://www.pcc.edu/library/primo/images/google_logo.png",
             mapping: function (queries, filters) {
                 try {
                     return queries.map(part => part.split(",")[2] || "").join(' ')
@@ -82,7 +82,7 @@ app
         {
             "name": "EBSCO Search",
             "url": "https://libproxy.pcc.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&site=ehost-live&scope=site&type=1&db=aph&db=f5h&mode=bool&lang=en&cli0=FT&clv0=Y&bquery=",
-            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/200px-Google_%22G%22_Logo.svg.png",
+            "img": "https://www.pcc.edu/library/primo/images/ebsco-search.png",
             mapping: function (queries, filters) {
                 try {
                     return queries.map(part => part.split(",")[2] || "").join(' ')

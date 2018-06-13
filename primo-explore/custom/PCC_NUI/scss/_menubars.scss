@@ -1,3 +1,60 @@
+/** defaults ***/
+
+md-toolbar.default-toolbar {
+  * {
+    color: $color_dark_blue;
+  }
+  *::after {
+    color: $color_dark_blue;
+  }
+  *::before {
+    color: $color_dark_blue;
+  }
+}
+
+/** top bar **/
+
+prm-topbar {
+  height: 70px;
+
+  /** toolbar **/
+  .top-nav-bar {
+    background-color: $color_teal !important;
+
+    prm-logo {
+      max-width: 250px;
+      min-width: 150px;
+      img.logo-image {
+        max-height: 25px;
+
+        @include sm {
+          max-height: 30px;
+        }
+
+        @include md {
+          max-height: 40px;
+        }
+
+        @include lg {
+          max-height: 50px;
+        }
+      }
+    }
+
+    /** top bar icons **/
+
+    prm-search-bookmark-filter {
+      .md-button {
+        color: $white !important;
+      }
+    }
+
+  }
+
+}
+
+
+/** search bar **/
 search-bar-sub-menu {
 
   button.md-button {
@@ -16,8 +73,6 @@ search-bar-sub-menu {
       }
 
 }
-
-
 
 
 /** back to search results */

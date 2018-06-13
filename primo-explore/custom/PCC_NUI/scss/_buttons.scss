@@ -82,4 +82,29 @@ prm-authentication {
 
 }
 
+/** top bar buttons & floating buttons **/
 
+#fixed-buttons-holder {
+  .md-button {
+    background-color: darken($color_teal, 5%) !important;
+    color: $white;
+
+    @include hover {
+      background-color: darken($color_dark_teal, 20%) !important;
+      color: $white;
+    }
+  }
+}
+
+.darker-bg,
+prm-search-bookmark-filter .md-button,
+prm-user-area,
+prm-user-area md-fab-trigger.show-user-info:after {
+  background-color: $color_dark_teal !important;
+  color: $white;
+
+  @include hover {
+    background-color: darken($color_dark_teal, 20%) !important;
+    color: $white;
+  }
+}

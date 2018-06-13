@@ -1,0 +1,30 @@
+
+toggle-institutions {
+  button.md-button {
+    @extend %button;
+    width: 210px;
+    background-color: $color_light_blue;
+    color: $color_teal;
+    text-transform: none !important;
+    &:active {
+      @extend %nodecoration;
+    }
+    &:focus {
+      @extend %nodecoration;
+    }
+    &:hover {
+      @extend %nodecoration;
+    }
+    &:not([disabled]) {
+      &.md-fab:active {
+        @extend %nodecoration;
+      }
+      &.md-raised:active {
+        @extend %nodecoration;
+      }
+    }
+    &.md-raised:not([disabled]) {
+      @extend %nodecoration;
+    }
+  }
+}

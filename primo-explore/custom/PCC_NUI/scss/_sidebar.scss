@@ -7,8 +7,22 @@ prm-facet-exact {
   }
 }
 
+
+
 .sidebar {
-  min-width: 340px;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+
+  @include lg {
+
+    width: $sidebar-width;
+    max-width: $sidebar-width;
+    min-width: $sidebar-width;
+
+  }
+
   .md-button {
     background-color: $color_alto_approx !important;
     @include hover {
@@ -34,6 +48,10 @@ prm-facet-exact {
     .md-chip {
       transform: none !important;
     }
+  }
+
+  .sidebar-header {
+    color: $color_medium_blue;
   }
 
 }
@@ -173,6 +191,27 @@ prm-facet-exact {
 prm-facet .sidebar-inner-wrapper {
   margin-right: 0;
 }
+
+
+prm-facet {
+  .primo-scrollbar,
+  md-dialog-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+
+    @include lg {
+
+      width: $sidebar-width;
+      max-width: $sidebar-width;
+      min-width: $sidebar-width;
+
+    }
+
+  }
+}
+
+
 //
 //prm-facet-exact {
 //  .md-chips .md-chip .md-chip-content md-checkbox ._md-container {
@@ -221,5 +260,74 @@ prm-facet-exact {
         }
       }
     }
+  }
+}
+
+
+.multiselect-facet-group {
+
+  prm-facet-exact {
+
+    .section-content {
+      .md-chips {
+        .md-chip {
+          .facet-title {
+            line-height: 1.25em;
+          }
+        }
+      }
+
+      &.multiselect-inactive .md-chip md-checkbox {
+        transform: scaleX(1);
+      }
+
+    }
+  }
+}
+
+.multiselect-submit.is-active {
+
+  .multiselect-submit-inner {
+
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+
+    @include lg {
+
+      min-width: $sidebar-width;
+      max-width: $sidebar-width;
+      width: $sidebar-width;
+
+    }
+  }
+
+}
+
+/** remove sidebar 'refine my results' **/
+.sidebar-section.compensate-padding-left h2.sidebar-title {
+  display: none;
+}
+
+h2.sidebar-title {
+  font-weight: 600;
+  color: $color_dark_teal;
+}
+
+@media (min-width: $break-xl -1px) and (max-width: $break-xxl) {
+  .flex-lg-20,
+  .layout-lg-row>.flex-lg-20,
+  .layout-row>.flex-lg-20 {
+    flex: 0 0 $sidebar-width;
+    max-width: $sidebar-width;
+  }
+}
+
+@media (min-width: $break-lg -1px ) and (max-width: $break-xl) {
+  .flex-md-25,
+  .layout-md-row > .flex-md-25,
+  .layout-row > .flex-md-25 {
+    flex: 0 0 $sidebar-width;
+    max-width: $sidebar-width;
   }
 }

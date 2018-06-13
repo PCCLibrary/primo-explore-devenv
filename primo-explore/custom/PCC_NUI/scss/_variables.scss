@@ -1,7 +1,15 @@
-$break-xs: '481px' !default;
-$break-sm: '781px' !default;
-$break-md: '941px' !default;
-$break-lg: '1200px' !default;
+/** breakpoints **/
+
+$break-xs: 480px !default;
+$break-sm: 600px !default;
+$break-md: 820px !default;
+$break-lg: 960px !default;
+$break-xl: 1280px !default;
+$break-xxl: 1920px !default;
+
+/** sidebar width **/
+$sidebar-width: 340px;
+
 
 //colors
 $white: #fff;
