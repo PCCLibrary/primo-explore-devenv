@@ -266,3 +266,10 @@ prm-main-menu[menu-type=full] {
   display: none;
 }
 
+#fixed-buttons-holder.fixed-to-top .md-button {
+  background-color: rgba($color_teal, .5) !important;
+  z-index: 9 !important;
+  @include hover {
+    background-color: rgba(darken($color_teal, 10%), 1) !important;
+  }
+}

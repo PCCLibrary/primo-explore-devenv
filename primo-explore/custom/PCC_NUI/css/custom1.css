@@ -728,6 +728,14 @@ prm-main-menu[menu-type=full] md-card .md-headline {
 .overlay-menu-item.layout-align-center-center.layout-row {
   display: none; }
 
+#fixed-buttons-holder.fixed-to-top .md-button {
+  background-color: rgba(0, 136, 164, 0.5) !important;
+  z-index: 9 !important; }
+  #fixed-buttons-holder.fixed-to-top .md-button:hover, #fixed-buttons-holder.fixed-to-top .md-button:active, #fixed-buttons-holder.fixed-to-top .md-button:focus, #fixed-buttons-holder.fixed-to-top .md-button:hover:not([disabled]), #fixed-buttons-holder.fixed-to-top .md-button:active:not([disabled]), #fixed-buttons-holder.fixed-to-top .md-button:focus:not([disabled]) {
+    background-color: #005e71 !important; }
+  #fixed-buttons-holder.fixed-to-top .md-button:visited {
+    color: #0f141a; }
+
 /* Create clickable logo */
 prm-logo div.product-logo {
   display:none;
@@ -786,12 +794,12 @@ prm-no-search-result > md-card.default-card {
 }
 
 .chat-frame-wrap{
-  width: 300px;
+  width: 340px;
 }
 
 .chat-frame{
-  width: 300px;
-  height: 280px;
+  width: 340px;
+  height: 320px;
   vertical-align: bottom;
   border-radius: 3px 3px 0 0;
 }
