@@ -1,7 +1,3 @@
-%sm_button_padding {
-  padding:.6em .35em .3em .35em !important;
-}
-
 .md-button {
 
   &:hover:not([disabled]) {
@@ -83,24 +79,42 @@ prm-authentication {
 }
 
 /** top bar buttons & floating buttons **/
+prm-search-bookmark-filter {
 
-#fixed-buttons-holder {
   .md-button {
-    background-color: darken($color_teal, 5%) !important;
-    color: $white;
+    @include button($color_teal, $white);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
 
-    @include hover {
-      background-color: darken($color_dark_teal, 20%) !important;
-      color: $white;
+  #fixed-buttons-holder {
+    .md-button {
+      @include button($color_teal, $white);
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
     }
   }
 }
 
 .darker-bg,
-prm-search-bookmark-filter .md-button,
+prm-search-bookmark-filter .md-button {
+
+  @include button();
+
+  //background-color: $color_dark_teal !important;
+  //color: $white;
+  //
+  //@include hover {
+  //  background-color: darken($color_dark_teal, 20%) !important;
+  //  color: $white;
+  //}
+}
+
 prm-user-area,
 prm-user-area md-fab-trigger.show-user-info:after {
-  background-color: $color_dark_teal !important;
+  background-color: darken($color_teal, 5%) !important;
   color: $white;
 
   @include hover {

@@ -118,6 +118,13 @@ prm-page-nav-menu {
 
 }
 
+.__xs .full-view-inner-container {
+  padding: 0;
+  @include sm {
+    padding: 1em 1.5em;
+  }
+}
+
 prm-brief-result-container {
   background-color: $white;
 }
@@ -147,7 +154,12 @@ prm-icon md-icon {
 }
 
 button.close-button {
-  background-color: $color_dark_blue;
+  background-color: rgba($color_dark_blue, .7);
+
+  @include hover {
+    background-color: rgba($color_dark_blue, 1);
+  }
+
     prm-icon md-icon {
     color: $white !important;
       &.md-primoExplore-theme {
@@ -209,7 +221,7 @@ prm-action-list,
 }
 
 md-dialog.light-on-dark-dialog {
-  background-color: $color_medium_blue;
+  background-color: darken($color_medium_blue, 10%);
 }
 
 md-dialog-content {
@@ -241,5 +253,16 @@ md-dialog-content {
   a.md-primoExplore-theme {
     z-index: 12;
   }
+}
+
+prm-main-menu[menu-type=full] {
+  md-card .md-headline {
+    color: $color_yellow;
+  }
+}
+
+/*** remove english dropdown menu ***/
+.overlay-menu-item.layout-align-center-center.layout-row {
+  display: none;
 }
 

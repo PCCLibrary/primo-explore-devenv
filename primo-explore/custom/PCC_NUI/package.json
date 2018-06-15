@@ -19,8 +19,10 @@
     "primo-explore-custom-actions": "^2.0.0",
     "primo-explore-custom-no-search-results": "^1.0.0",
     "primo-explore-external-search": "^1.1.5",
-    "primo-explore-libraryh3lp-widget": "^1.0.2",
     "primo-explore-search-bar-sub-menu": "^1.0.1",
     "primo-explore-toggle-institutions": "^3.0.0"
+  },
+  "dependencies": {
+    "primo-explore-libraryh3lp-widget": "^1.0.4"
   }
 }

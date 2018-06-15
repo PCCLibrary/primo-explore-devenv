@@ -1,0 +1,30 @@
+
+.prm-primary-color {
+  color: $color_teal;
+}
+.prm-secondary-color {
+  color: $color_dark_teal;
+}
+
+.prm-secondary-color,
+prm-search-bookmark-filter
+.md-button,
+prm-topbar .top-nav-bar {
+  color:$color_dark_blue;
+}
+
+md-content{
+  background-color: white !important;
+}
+
+/* "spinner" (diamant) */
+prm-spinner.light-on-dark .diamond {
+  background-color: $color_yellow;
+}
+prm-spinner.dark-on-light .diamond {
+  background-color: #d3d3d3; /* hellgrau */
+}
+prm-spinner.half-transparent .diamond {
+  background-color: #009991; /* jade */
+}
+

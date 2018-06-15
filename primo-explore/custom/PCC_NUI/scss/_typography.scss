@@ -41,3 +41,17 @@ prm-search-result-availability-line {
   }
 
 }
+
+md-dialog.light-on-dark-dialog {
+  md-list {
+    md-list-item {
+      .md-list-item-text {
+        .list-item-title,
+        h3 {
+          color: $color_yellow;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

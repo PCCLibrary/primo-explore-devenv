@@ -74,7 +74,6 @@ search-bar-sub-menu {
 
 }
 
-
 /** back to search results */
 
 prm-back-to-search-results-button {
@@ -85,3 +84,64 @@ prm-back-to-search-results-button {
     }
 
 }
+
+prm-topbar {
+  .top-nav-bar {
+    background-color: $color_teal;
+  }
+}
+
+prm-user-area {
+
+  /** top bar when login is open **/
+  md-fab-toolbar {
+
+    &.md-left,
+    &.md-right {
+      .md-toolbar-tools {
+        background-color: $color_teal;
+      }
+    }
+
+    /** library account when login is open **/
+    ._md-fab-action-item,
+    .md-fab-action-item {
+      background-color: rgba($color_dark_teal, .5);
+    }
+  }
+}
+/** user buttons **/
+.user-menu-button {
+  background-color: $color_dark_teal;
+  .user-name {
+    // color: white;
+  }
+}
+
+
+
+///* header top */
+//.prm-primary-bg.prm-hue1, prm-journals-search-bar.prm-hue1, prm-search-bar.prm-hue1, prm-spinner.prm-hue1.overlay-cover.light-on-dark::after, prm-topbar .top-nav-bar {
+//  background-color: red; /* zhb grün */
+//}
+//
+///* header - login etc */
+//prm-user-area md-fab-toolbar.md-left .md-toolbar-tools, prm-user-area md-fab-toolbar.md-right .md-toolbar-tools {
+//  background-color: blueviolet;
+//}
+//
+////prm-user-area .user-menu-button .user-name {
+////  color: white;
+////}
+//
+//
+///*** open sign in toolbar **/
+//prm-user-area md-fab-toolbar.md-left .md-toolbar-tools,
+//prm-user-area md-fab-toolbar.md-right .md-toolbar-tools {
+//  background-color: chartreuse;
+//}
+//
+///*** library card button **/
+//prm-user-area md-fab-toolbar ._md-fab-action-item, prm-user-area md-fab-toolbar .md-fab-action-item {
+//  background-color: pink;
+//}
