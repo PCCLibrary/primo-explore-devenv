@@ -1,0 +1,70 @@
+prm-stand-alone-login {
+  background-color: $color_teal;
+  height: 100vh;
+  display: block;
+
+
+  prm-logo-after div.product-logo-local a {
+    max-width: none;
+    padding: 0;
+    text-align: center;
+
+    img.logo-image {
+      max-width: 320px;
+      width: 80%;
+      margin: .5em auto;
+    }
+
+  }
+
+  .login-card {
+    position: relative;
+    max-width: 90%;
+    min-width: 90%;
+    background-color: transparent;
+    color: $white;
+
+
+    md-dialog-content {
+
+      prm-login-item {
+        color: #fff;
+        max-width: 100%;
+
+        h3.list-item-title {
+          color: yellow !important;
+          font-weight: 600 !important;
+          max-width: 100%;
+          overflow: visible !important;
+          white-space: normal !important;
+
+          font-size: 1.2em !important;
+
+          @include sm {
+            font-size: 1.6em !important;
+          }
+        }
+
+        prm-icon {
+          color: #fff !important;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+md-dialog {
+
+    &.login-dialog {
+
+        max-width: 580px;
+        min-width: 360px;
+
+
+    }
+
+}

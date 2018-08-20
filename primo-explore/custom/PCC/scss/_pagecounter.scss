@@ -1,0 +1,27 @@
+prm-page-nav-menu {
+
+  background-color: transparent;
+  max-width: 100px;
+
+  @include sm {
+
+    right: 3%!important;
+    left: 90% !important;
+
+  }
+
+  @include md {
+
+    right: 2%!important;
+    left: 92% !important;
+
+  }
+
+  @include lg {
+
+    right: 1%!important;
+    left: 94% !important;
+
+  }
+
+}

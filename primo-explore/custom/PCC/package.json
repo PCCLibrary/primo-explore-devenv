@@ -1,0 +1,28 @@
+{
+  "name": "PCC",
+  "version": "1.0.0",
+  "description": "PCC NUI primo explore package",
+  "main": "custom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PCCLibrary/primo-explore-devenv.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/PCCLibrary/primo-explore-devenv#readme",
+  "devDependencies": {
+    "primo-explore-clickable-logo-to-any-link": "^1.0.0",
+    "primo-explore-custom-actions": "^2.0.0",
+    "primo-explore-custom-no-search-results": "^1.0.0",
+    "primo-explore-external-search": "^1.1.5",
+    "primo-explore-search-bar-sub-menu": "^1.0.1",
+    "primo-explore-toggle-institutions": "^3.0.0"
+  },
+  "dependencies": {
+    "primo-explore-libraryh3lp-widget": "^1.0.4"
+  }
+}

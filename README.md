@@ -68,6 +68,8 @@ This custom View folder can be downloaded from your Primo Back Office, by follow
 
    - From command line, run the command : `gulp run --view <the VIEW_CODE folder>` (This will start your local server.)
    
+   `gulp run --view=PCC --browserify --useScss`
+   
      (For example, running `gulp run --view Auto1` will start the environment taking the customizations from the <b>Auto1</b> folder.)
      
      ![Server Startup Image](./help_files/serverStartup.png "Server Startup")

@@ -608,10 +608,6 @@ prm-stand-alone-login {
     min-width: 90%;
     background-color: transparent;
     color: #fff; }
-    @media only screen and (min-width: 600px) {
-      prm-stand-alone-login .login-card {
-        max-width: 580px;
-        min-width: 360px; } }
     prm-stand-alone-login .login-card md-dialog-content prm-login-item {
       color: #fff;
       max-width: 100%; }
@@ -627,6 +623,10 @@ prm-stand-alone-login {
             font-size: 1.6em !important; } }
       prm-stand-alone-login .login-card md-dialog-content prm-login-item prm-icon {
         color: #fff !important; }
+
+md-dialog.login-dialog {
+  max-width: 580px;
+  min-width: 360px; }
 
 prm-page-nav-menu {
   background-color: transparent;
@@ -823,6 +823,12 @@ prm-main-menu[menu-type=full] md-card .md-headline {
     background-color: #005e71 !important; }
   #fixed-buttons-holder.fixed-to-top .md-button:visited {
     color: #0f141a; }
+
+button.md-icon-button.close-button.full-view-navigation.md-button.md-primoExplore-theme.md-ink-ripple:nth-of-type(1) {
+  transform: translateY(-150%) !important; }
+
+button.md-icon-button.close-button.full-view-navigation.md-button.md-primoExplore-theme.md-ink-ripple:nth-of-type(3) {
+  transform: translateY(150%) !important; }
 
 /* Create clickable logo */
 prm-logo div.product-logo {

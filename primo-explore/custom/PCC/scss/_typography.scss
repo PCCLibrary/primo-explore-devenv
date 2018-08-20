@@ -1,0 +1,57 @@
+/** make availability text bolder **/
+prm-search-result-availability-line {
+  button {
+    font-weight: 600 !important;
+  }
+}
+
+/** availability link **/
+
+.ext_not_restricted,
+.fulltext,
+.fulltext_linktorsrc,
+.fulltext_linktorsrc_newspaper,
+.fulltext_newspaper, .not_restricted,
+.prm-positive,
+.status-available,
+[class*=available],
+[class*=FT] {
+  color: $color_dark_teal;
+}
+
+/** sidebar chips **/
+
+.md-chips .md-chip {
+
+  .md-chip-content {
+    strong {
+      font-weight: 300;
+    }
+  }
+}
+
+/** single record bib data **/
+
+.spaced-rows {
+
+  & > .layout-row {
+
+    margin-bottom: .8em;
+
+  }
+
+}
+
+md-dialog.light-on-dark-dialog {
+  md-list {
+    md-list-item {
+      .md-list-item-text {
+        .list-item-title,
+        h3 {
+          color: $color_yellow;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
