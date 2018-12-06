@@ -134,3 +134,20 @@ prm-messages-and-blocks-overview-after {
 
   }
 }
+
+button.close-button {
+  background-color: transparent;
+  transition: all 0.25s ease-out, color 0.25s ease-out;
+
+  @include hover {
+    background-color: rgba($color_dark_blue, .2);
+    transition: all 0.25s ease-out, color 0.25s ease-out;
+  }
+
+  prm-icon md-icon {
+    color: $white !important;
+    &.md-primoExplore-theme {
+      color: $white !important;
+    }
+  }
+}

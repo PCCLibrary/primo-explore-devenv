@@ -70,10 +70,6 @@ md-dialog.light-on-dark-dialog md-list md-list-item .md-list-item-text h3 {
   color: #f8bb17;
   font-weight: 600; }
 
-prm-facet-exact .md-chips .md-chip {
-  line-height: normal;
-  height: auto; }
-
 .sidebar {
   width: 100%;
   max-width: 100%;
@@ -102,37 +98,84 @@ prm-facet-exact .md-chips .md-chip {
     -ms-flex-pack: justify;
     justify-content: space-between;
     line-height: inherit; }
-    .section-content .md-chips .md-chip .md-chip-content {
-      padding-left: 0; }
+    .section-content .md-chips .md-chip.wrapping-chip {
+      height: auto;
+      max-width: 100%;
+      margin: 0 0 5px 0 !important; }
+      .section-content .md-chips .md-chip.wrapping-chip .md-chip-remove-container {
+        position: relative;
+        height: 28px;
+        width: 28px;
+        border-radius: 0;
+        visibility: hidden;
+        z-index: 1;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        right: 0; }
+        .section-content .md-chips .md-chip.wrapping-chip .md-chip-remove-container .md-button {
+          position: relative;
+          height: 28px;
+          top: 0;
+          visibility: visible !important; }
+      .section-content .md-chips .md-chip.wrapping-chip .md-chip-content {
+        padding-left: 0;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: inherit;
+        align-items: inherit;
+        height: auto; }
 
 /* wrap overflow text in facets */
-prm-facet-exact .md-chips .md-chip .md-chip-content md-checkbox ._md-container {
-  top: 8px; }
-
-prm-facet-exact .section-content .md-chips .md-chip .md-chip-content {
-  overflow: visible;
-  margin-bottom: 0.5em;
-  width: 100%; }
-
-prm-facet-exact .section-content .md-chips .md-chip .facet-title {
-  line-height: 1.25em; }
-
 prm-facet-exact .md-chips .md-chip {
   line-height: normal;
-  height: auto; }
+  height: auto;
+  /** override defaults for facet icon **/ }
+  prm-facet-exact .md-chips .md-chip .facet-title {
+    line-height: 1.2em;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 0;
+    overflow: visible;
+    white-space: normal;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 0px !important;
+    text-align: left;
+    direction: ltr;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: auto;
+    box-sizing: border-box; }
   prm-facet-exact .md-chips .md-chip .md-chip-content {
-    margin-left: 2em; }
+    overflow: visible;
+    margin-bottom: 0;
+    width: 100%; }
     prm-facet-exact .md-chips .md-chip .md-chip-content strong {
       white-space: normal;
       overflow: visible; }
+    prm-facet-exact .md-chips .md-chip .md-chip-content md-checkbox {
+      height: 24px;
+      transition: none;
+      transform: none;
+      left: 0;
+      width: 20px;
+      cursor: default; }
   prm-facet-exact .md-chips .md-chip .md-chip-remove-container {
-    height: 28px;
+    height: 24px;
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
-    top: -5px; }
+    top: 0; }
   prm-facet-exact .md-chips .md-chip strong + span {
     margin-left: auto;
     -ms-flex-item-align: center;
@@ -147,8 +190,7 @@ prm-facet-exact .md-chips .md-chip {
     opacity: 1; }
   prm-facet-exact .md-chips .md-chip .facet-title {
     color: #080606;
-    margin-right: .2em;
-    max-width: calc(100% - 2em);
+    margin-right: 0 !important;
     overflow: hidden;
     padding-left: 1em;
     padding-right: .35em; }
@@ -156,7 +198,8 @@ prm-facet-exact .md-chips .md-chip {
     display: -ms-inline-flexbox;
     display: inline-flex; }
   prm-facet-exact .md-chips .md-chip .md-chip-remove-container {
-    left: 0; }
+    left: 0;
+    /** icon on facet **/ }
     prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button {
       background: none !important;
       opacity: 1 !important;
@@ -167,25 +210,80 @@ prm-facet-exact .md-chips .md-chip {
         color: #e77a25 !important; }
       prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button:visited {
         color: #0f141a; }
+      prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button.md-icon-button {
+        margin: 0 6px;
+        height: 24px;
+        min-width: 0;
+        line-height: 24px;
+        padding: 0;
+        width: 24px;
+        border-radius: 0; }
+      prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon {
+        background: transparent; }
+        prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon:hover, prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon:active, prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon:focus, prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon:hover:not([disabled]), prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon:active:not([disabled]), prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon:focus:not([disabled]) {
+          background: transparent !important; }
+        prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon:visited {
+          color: #0f141a; }
+        prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon md-icon {
+          height: 24px;
+          width: 24px;
+          min-height: inherit;
+          min-width: inherit;
+          transition: none;
+          position: absolute !important;
+          top: 2px !important;
+          right: 0 !important;
+          background: transparent !important; }
   prm-facet-exact .md-chips .md-chip .md-chip-content {
     overflow: visible;
     width: 100%; }
     prm-facet-exact .md-chips .md-chip .md-chip-content strong {
       white-space: normal;
-      margin-right: 0; }
+      margin-right: 0 !important; }
     prm-facet-exact .md-chips .md-chip .md-chip-content strong + span {
       -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
-      margin-top: -1px; }
+      margin-top: 0;
+      width: auto !important;
+      -ms-flex: 1 1 80%;
+      flex: 1 1 80%; }
     prm-facet-exact .md-chips .md-chip .md-chip-content md-checkbox {
       transition: none;
       transform: none;
-      left: 0;
+      left: inherit;
+      position: inherit;
       width: 20px;
       cursor: default; }
       prm-facet-exact .md-chips .md-chip .md-chip-content md-checkbox.md-focused:not([disabled]):not(.md-checked) ._md-container:before {
         background: none; }
+  prm-facet-exact .md-chips .md-chip.wrapping-chip {
+    height: auto;
+    max-width: 100%; }
+    prm-facet-exact .md-chips .md-chip.wrapping-chip .facet-title {
+      line-height: 1.2em;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      overflow: visible;
+      white-space: normal;
+      display: -ms-flexbox;
+      display: flex;
+      margin-right: 0 !important;
+      text-align: left;
+      direction: ltr; }
+    prm-facet-exact .md-chips .md-chip.wrapping-chip .md-chip-remove-container {
+      position: inherit;
+      height: 24px;
+      border-radius: 0;
+      visibility: visible;
+      z-index: 1;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: start;
+      align-items: flex-start; }
+      prm-facet-exact .md-chips .md-chip.wrapping-chip .md-chip-remove-container .md-button {
+        position: relative;
+        top: 0; }
 
 prm-facet .sidebar-inner-wrapper {
   margin-right: 0; }
@@ -202,18 +300,17 @@ prm-facet md-dialog-content {
       max-width: 340px;
       min-width: 340px; } }
 
-/* /wrap overflow text in facets */
-prm-facet-exact .section-title {
-  margin-bottom: 1em; }
-
-prm-facet-exact .section-content .md-chips .md-chip {
-  line-height: normal;
-  height: auto; }
-  prm-facet-exact .section-content .md-chips .md-chip .facet-title {
-    margin-left: .5em; }
-
 .multiselect-facet-group prm-facet-exact .section-content .md-chips .md-chip .facet-title {
-  line-height: 1.25em; }
+  line-height: 1.2em; }
+  .multiselect-facet-group prm-facet-exact .section-content .md-chips .md-chip .facet-title .text-number-space {
+    margin: 0 5px;
+    -ms-flex: 1 1 90%;
+    flex: 1 1 90%; }
+  .multiselect-facet-group prm-facet-exact .section-content .md-chips .md-chip .facet-title .facet-counter {
+    white-space: normal;
+    font-weight: 400;
+    -ms-flex: 1 1 10%;
+    flex: 1 1 10%; }
 
 .multiselect-facet-group prm-facet-exact .section-content.multiselect-inactive .md-chip md-checkbox {
   transform: scaleX(1); }
@@ -251,6 +348,15 @@ h2.sidebar-title {
     -ms-flex: 0 0 340px;
     flex: 0 0 340px;
     max-width: 340px; } }
+
+/*** fix checkbox overlap of clear filters div **/
+.multiselect-facet-group.multiselect-inactive .md-chip:hover md-checkbox, .multiselect-facet-group.multiselect-inactive .md-chip:focus md-checkbox, .multiselect-facet-group.multiselect-inactive .md-chip md-checkbox:focus {
+  z-index: 9 !important; }
+
+.multiselect-facet-group.multiselect-active .md-chip {
+  transform: translateX(10px); }
+  .multiselect-facet-group.multiselect-active .md-chip md-checkbox {
+    z-index: 9 !important; }
 
 .md-button:hover:not([disabled]) {
   color: #fff; }
@@ -396,6 +502,19 @@ prm-messages-and-blocks-overview-after a.md-button {
     prm-fines-after a.md-button.md-secondary:visited,
     prm-messages-and-blocks-overview-after a.md-button.md-secondary:visited {
       color: #0f141a; }
+
+button.close-button {
+  background-color: transparent;
+  transition: all 0.25s ease-out, color 0.25s ease-out; }
+  button.close-button:hover, button.close-button:active, button.close-button:focus, button.close-button:hover:not([disabled]), button.close-button:active:not([disabled]), button.close-button:focus:not([disabled]) {
+    background-color: rgba(53, 71, 90, 0.2);
+    transition: all 0.25s ease-out, color 0.25s ease-out; }
+  button.close-button:visited {
+    color: #0f141a; }
+  button.close-button prm-icon md-icon {
+    color: #fff !important; }
+    button.close-button prm-icon md-icon.md-primoExplore-theme {
+      color: #fff !important; }
 
 /** defaults ***/
 md-toolbar.default-toolbar * {
@@ -745,17 +864,6 @@ prm-icon md-icon {
   prm-icon md-icon.md-primoExplore-theme {
     color: #395575; }
 
-button.close-button {
-  background-color: rgba(53, 71, 90, 0.7); }
-  button.close-button:hover, button.close-button:active, button.close-button:focus, button.close-button:hover:not([disabled]), button.close-button:active:not([disabled]), button.close-button:focus:not([disabled]) {
-    background-color: #35475a; }
-  button.close-button:visited {
-    color: #0f141a; }
-  button.close-button prm-icon md-icon {
-    color: #fff !important; }
-    button.close-button prm-icon md-icon.md-primoExplore-theme {
-      color: #fff !important; }
-
 prm-brief-result .item-title {
   color: #395575; }
 
@@ -823,12 +931,6 @@ prm-main-menu[menu-type=full] md-card .md-headline {
     background-color: #005e71 !important; }
   #fixed-buttons-holder.fixed-to-top .md-button:visited {
     color: #0f141a; }
-
-button.md-icon-button.close-button.full-view-navigation.md-button.md-primoExplore-theme.md-ink-ripple:nth-of-type(1) {
-  transform: translateY(-150%) !important; }
-
-button.md-icon-button.close-button.full-view-navigation.md-button.md-primoExplore-theme.md-ink-ripple:nth-of-type(3) {
-  transform: translateY(150%) !important; }
 
 /* Create clickable logo */
 prm-logo div.product-logo {

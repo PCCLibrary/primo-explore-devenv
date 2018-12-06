@@ -155,20 +155,6 @@ prm-icon md-icon {
   }
 }
 
-button.close-button {
-  background-color: rgba($color_dark_blue, .7);
-
-  @include hover {
-    background-color: rgba($color_dark_blue, 1);
-  }
-
-    prm-icon md-icon {
-    color: $white !important;
-      &.md-primoExplore-theme {
-        color: $white !important;
-      }
-    }
-}
 
 prm-brief-result .item-title {
   color: $color_medium_blue;
@@ -275,14 +261,3 @@ prm-main-menu[menu-type=full] {
     background-color: rgba(darken($color_teal, 10%), 1) !important;
   }
 }
-
-/*** button.md-icon-button.close-button.full-view-navigation.md-button.md-primoExplore-theme.md-ink-ripple {
-
-  &:nth-of-type(1) {
-    transform: translateY(-150%) !important;
-  }
-
-  &:nth-of-type(3) {
-    transform: translateY(150%) !important;
-  }
-} **/
