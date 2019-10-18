@@ -5,6 +5,7 @@ import 'primo-explore-toggle-institutions';
 import 'primo-explore-custom-actions';
 import 'primo-explore-custom-no-search-results';
 import 'primo-explore-external-search';
+import 'primo-explore-google-analytics';
 
 
 import { viewName } from './viewName';
@@ -25,7 +26,8 @@ let app = angular.module('viewCustom', [
                                         'customNoSearchResults',
                                         'linksInProfile',
                                         'libraryAccountQuestions',
-                                        'externalSearch'
+                                        'externalSearch',
+                                        'googleAnalytics'
                                       ]);
 
 app
@@ -41,7 +43,7 @@ app
     .value('searchTargets', [
         {
         "name": "Worldcat",
-        "url": "https://pcc.on.worldcat.org/search?",
+        "url": "https://www.worldcat.org/search?",
         "img": "https://www.pcc.edu/library/primo/images/worldcat-logo.png",
             mapping: function (queries, filters) {
                 const query_mappings = {
@@ -53,7 +55,7 @@ app
                     'issn': 'n2'
                 }
                 try {
-                    return 'queryString=' + queries.map(part => {
+                    return 'q=' + queries.map(part => {
                         let terms = part.split(',')
                         let type = query_mappings[terms[0]] || 'kw'
                         let string = terms[2] || ''
@@ -94,7 +96,32 @@ app
         }
     ])
 
+app.run(runBlock);
 
+    runBlock.$inject = ['gaInjectionService'];
+    function runBlock(gaInjectionService) {
+        // other potential run operations...
+        gaInjectionService.injectGACode();
+    }
+
+app.constant('googleAnalyticsConfig', {
+    trackingId: 'AB-123456789',
+    // use null to specify an external script shouldn't be loaded
+    externalScriptURL: null,
+    // copy from script snippet from Google if you're running legacy Google Analytics
+    inlineScript: `
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1329150-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  `,
+    target: 'body',
+})
 
 
 
