@@ -261,3 +261,15 @@ prm-main-menu[menu-type=full] {
     background-color: rgba(darken($color_teal, 10%), 1) !important;
   }
 }
+
+/* Banner message */
+primo-explore::before {
+  content:"Due to PCCs closure, physical materials cannot be requested until further notice. PCC students, staff, and faculty can still access electronic resources and place article requests.";
+  display: inline-block;
+  background:$color_orange;
+  text-align:center;
+  width:100%;
+  font-weight:bold;
+  color: $white;
+  padding: .5em 2em;
+}

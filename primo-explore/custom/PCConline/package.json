@@ -1,7 +1,7 @@
 {
-  "name": "PCConline",
+  "name": "PCC",
   "version": "1.0.0",
-  "description": "PCC ONLINE primo explore package",
+  "description": "PCC NUI primo explore package",
   "main": "custom.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

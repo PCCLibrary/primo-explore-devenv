@@ -931,3 +931,128 @@ prm-main-menu[menu-type=full] md-card .md-headline {
     background-color: #005e71 !important; }
   #fixed-buttons-holder.fixed-to-top .md-button:visited {
     color: #0f141a; }
+
+/* Banner message */
+primo-explore::before {
+  content: "Due to PCCs closure, physical materials cannot be requested until further notice. PCC students, staff, and faculty can still access electronic resources and place article requests.";
+  display: inline-block;
+  background: #e77a25;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+  padding: .5em 2em; }
+
+/* Create clickable logo */
+prm-logo div.product-logo {
+  display:none;
+}
+prm-logo div.product-logo-local {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+prm-logo-after div.product-logo-local a {
+  max-width: none;
+  padding: 0;
+}
+prm-logo-after div.product-logo-local a:hover,
+prm-logo-after div.product-logo-local a:active {
+  box-shadow: none !important;
+  background-color: inherit !important;
+}
+
+/* Hide out-of-the-box no search results card */
+prm-no-search-result > md-card.default-card {
+  display: none;
+}
+
+.chat-tab, .chat-frame-wrap{
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  border: 0 none;
+  z-index: 200;
+}
+
+.chat-tab{
+  padding: 10px 10px 8px;
+  font-size: 14px;
+  border-radius: 3px 3px 0 0;
+  font-weight: bold;
+}
+
+.chat-close{
+  border: 0 none;
+  background: #f5f7fa;
+  font-size: 16px;
+  border-radius: 50%;
+  position: absolute;
+  right: -5px;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+}
+
+.chat-close:hover {
+  color: #027bc2;
+}
+
+.chat-frame-wrap{
+  width: 340px;
+}
+
+.chat-frame{
+  width: 340px;
+  height: 320px;
+  vertical-align: bottom;
+  border-radius: 3px 3px 0 0;
+}
+
+@media only screen and (max-width: 960px) {
+  .chat-bottom-padding {
+    bottom: 60px;
+  }
+  body.md-dialog-is-showing .chat-bottom-padding {
+    bottom: 0 !important;
+  }
+}
+
+/*
+  The reason these are such specific pixels is that they were chosen
+  to space correctly around the existing search bar
+  Of course if the size of the existing search bar is different of if ExL
+  changes it these base values will be meaningless
+*/
+prm-search-bar {
+  padding-bottom: 58.5px;
+}
+.__sm prm-search-bar {
+  padding-bottom: 49.5px;
+}
+.__xs prm-search-bar {
+  padding-bottom: 36px;
+}
+search-bar-sub-menu ul {
+  margin: 0;
+}
+search-bar-sub-menu ul li {
+  display: inline;
+  list-style: none;
+  padding: 0;
+}
+search-bar-sub-menu div.search-bar-sub-menu {
+  background-color: #CCD0D5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 36px;
+}
+search-bar-sub-menu .md-button.md-small {
+  font-size: .75em;
+  min-width: 42px;
+  font-weight: bold;
+}

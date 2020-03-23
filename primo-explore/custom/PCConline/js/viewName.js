@@ -1,2 +1,2 @@
 // vid
-export let viewName = "PCConline";
+export let viewName = "PCC";

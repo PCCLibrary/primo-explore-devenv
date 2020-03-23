@@ -932,6 +932,17 @@ prm-main-menu[menu-type=full] md-card .md-headline {
   #fixed-buttons-holder.fixed-to-top .md-button:visited {
     color: #0f141a; }
 
+/* Banner message */
+primo-explore::before {
+  content: "Due to PCCs closure, physical materials cannot be requested until further notice. PCC students, staff, and faculty can still access electronic resources and place article requests.";
+  display: inline-block;
+  background: #e77a25;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+  padding: .5em 2em; }
+
 /* Create clickable logo */
 prm-logo div.product-logo {
   display:none;
