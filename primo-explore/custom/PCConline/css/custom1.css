@@ -1,0 +1,933 @@
+/** breakpoints **/
+/** sidebar width **/
+toggle-institutions button.md-button, input[type='submit'].submitAsLink {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: inherit;
+  padding: 0.85em 1em;
+  border: 1px solid transparent;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  font-size: 0.9rem;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 1em 0;
+  text-decoration: none; }
+
+prm-authentication button.md-button[aria-label="Sign in"], prm-authentication button.md-button[aria-label="Sign in"] span[translate="getit.signin_link.sign_in"] {
+  padding: .6em .35em .3em .35em !important; }
+
+.sidebar .md-button:hover, .sidebar .md-button:active, .sidebar .md-button:focus, .sidebar .md-button:hover:not([disabled]), .sidebar .md-button:active:not([disabled]), .sidebar .md-button:focus:not([disabled]), search-bar-sub-menu button.md-button:hover, search-bar-sub-menu button.md-button:active, search-bar-sub-menu button.md-button:focus, search-bar-sub-menu button.md-button:hover:not([disabled]), search-bar-sub-menu button.md-button:active:not([disabled]), search-bar-sub-menu button.md-button:focus:not([disabled]), search-bar-sub-menu button.md-button.md-focused {
+  background-color: #cccccc !important;
+  color: #030303; }
+
+toggle-institutions button.md-button:active, toggle-institutions button.md-button:focus, toggle-institutions button.md-button:hover, toggle-institutions button.md-button.md-fab:not([disabled]):active, toggle-institutions button.md-button.md-raised:not([disabled]):active, toggle-institutions button.md-button.md-raised:not([disabled]), input[type='submit'].submitAsLink:hover {
+  text-decoration: none;
+  text-shadow: none;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  box-shadow: none; }
+
+prm-action-list md-nav-bar .md-nav-item,
+.saved-query-list md-nav-bar .md-nav-item {
+  max-width: 100%; }
+
+.sidebar .md-button.md-primary, prm-authentication button.md-button[aria-label="Sign in"] {
+  background-color: #0088a4 !important;
+  color: #fff !important; }
+  .sidebar .md-button.md-primary:hover, prm-authentication button.md-button[aria-label="Sign in"]:hover, .sidebar .md-button.md-primary:active, prm-authentication button.md-button[aria-label="Sign in"]:active, .sidebar .md-button.md-primary:focus, prm-authentication button.md-button[aria-label="Sign in"]:focus, .sidebar .md-button.md-primary:hover:not([disabled]), prm-authentication button.md-button[aria-label="Sign in"]:hover:not([disabled]), .sidebar .md-button.md-primary:active:not([disabled]), prm-authentication button.md-button[aria-label="Sign in"]:active:not([disabled]), .sidebar .md-button.md-primary:focus:not([disabled]), prm-authentication button.md-button[aria-label="Sign in"]:focus:not([disabled]) {
+    background-color: #396675 !important;
+    color: #fff !important; }
+  .sidebar .md-button.md-primary:visited, prm-authentication button.md-button[aria-label="Sign in"]:visited {
+    color: #0f141a; }
+
+/** make availability text bolder **/
+prm-search-result-availability-line button {
+  font-weight: 600 !important; }
+
+/** availability link **/
+.ext_not_restricted,
+.fulltext,
+.fulltext_linktorsrc,
+.fulltext_linktorsrc_newspaper,
+.fulltext_newspaper, .not_restricted,
+.prm-positive,
+.status-available,
+[class*=available],
+[class*=FT] {
+  color: #396675; }
+
+/** sidebar chips **/
+.md-chips .md-chip .md-chip-content strong {
+  font-weight: 300; }
+
+/** single record bib data **/
+.spaced-rows > .layout-row {
+  margin-bottom: .8em; }
+
+md-dialog.light-on-dark-dialog md-list md-list-item .md-list-item-text .list-item-title,
+md-dialog.light-on-dark-dialog md-list md-list-item .md-list-item-text h3 {
+  color: #f8bb17;
+  font-weight: 600; }
+
+.sidebar {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%; }
+  @media only screen and (min-width: 960px) {
+    .sidebar {
+      width: 340px;
+      max-width: 340px;
+      min-width: 340px; } }
+  .sidebar .md-button {
+    background-color: #d9d9d9 !important; }
+    .sidebar .md-button:visited {
+      color: #0f141a; }
+  .sidebar .multiselect-facet-group.multiselect-active .md-chip {
+    transform: none !important; }
+  .sidebar .sidebar-header {
+    color: #395575; }
+
+/** remove left padding on facet row **/
+.section-content .md-chips {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: .95em;
+  padding: 0; }
+  .section-content .md-chips .md-chip {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    line-height: inherit; }
+    .section-content .md-chips .md-chip.wrapping-chip {
+      height: auto;
+      max-width: 100%;
+      margin: 0 0 5px 0 !important; }
+      .section-content .md-chips .md-chip.wrapping-chip .md-chip-remove-container {
+        position: relative;
+        height: 28px;
+        width: 28px;
+        border-radius: 0;
+        visibility: hidden;
+        z-index: 1;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        right: 0; }
+        .section-content .md-chips .md-chip.wrapping-chip .md-chip-remove-container .md-button {
+          position: relative;
+          height: 28px;
+          top: 0;
+          visibility: visible !important; }
+      .section-content .md-chips .md-chip.wrapping-chip .md-chip-content {
+        padding-left: 0;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: inherit;
+        align-items: inherit;
+        height: auto; }
+
+/* wrap overflow text in facets */
+prm-facet-exact .md-chips .md-chip {
+  line-height: normal;
+  height: auto;
+  /** override defaults for facet icon **/ }
+  prm-facet-exact .md-chips .md-chip .facet-title {
+    line-height: 1.2em;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 0;
+    overflow: visible;
+    white-space: normal;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 0px !important;
+    text-align: left;
+    direction: ltr;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: auto;
+    box-sizing: border-box; }
+  prm-facet-exact .md-chips .md-chip .md-chip-content {
+    overflow: visible;
+    margin-bottom: 0;
+    width: 100%; }
+    prm-facet-exact .md-chips .md-chip .md-chip-content strong {
+      white-space: normal;
+      overflow: visible; }
+    prm-facet-exact .md-chips .md-chip .md-chip-content md-checkbox {
+      height: 24px;
+      transition: none;
+      transform: none;
+      left: 0;
+      width: 20px;
+      cursor: default; }
+  prm-facet-exact .md-chips .md-chip .md-chip-remove-container {
+    height: 24px;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    top: 0; }
+  prm-facet-exact .md-chips .md-chip strong + span {
+    margin-left: auto;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center; }
+  prm-facet-exact .md-chips .md-chip .button-exclude._md-focused:not([disabled]),
+  prm-facet-exact .md-chips .md-chip .button-exclude.hovered:not([disabled]),
+  prm-facet-exact .md-chips .md-chip .button-exclude.md-focused:not([disabled]),
+  prm-facet-exact .md-chips .md-chip .button-exclude:focus:not([disabled]),
+  prm-facet-exact .md-chips .md-chip .button-exclude:hover:not([disabled]) {
+    background: none !important;
+    opacity: 1; }
+  prm-facet-exact .md-chips .md-chip .facet-title {
+    color: #080606;
+    margin-right: 0 !important;
+    overflow: hidden;
+    padding-left: 1em;
+    padding-right: .35em; }
+  prm-facet-exact .md-chips .md-chip .facet-title + span {
+    display: -ms-inline-flexbox;
+    display: inline-flex; }
+  prm-facet-exact .md-chips .md-chip .md-chip-remove-container {
+    left: 0;
+    /** icon on facet **/ }
+    prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button {
+      background: none !important;
+      opacity: 1 !important;
+      color: #666 !important; }
+      prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button:hover, prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button:active, prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button:focus, prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button:hover:not([disabled]), prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button:active:not([disabled]), prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button:focus:not([disabled]) {
+        opacity: 1;
+        background: none;
+        color: #e77a25 !important; }
+      prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button:visited {
+        color: #0f141a; }
+      prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button.md-icon-button {
+        margin: 0 6px;
+        height: 24px;
+        min-width: 0;
+        line-height: 24px;
+        padding: 0;
+        width: 24px;
+        border-radius: 0; }
+      prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon {
+        background: transparent; }
+        prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon:hover, prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon:active, prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon:focus, prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon:hover:not([disabled]), prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon:active:not([disabled]), prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon:focus:not([disabled]) {
+          background: transparent !important; }
+        prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon:visited {
+          color: #0f141a; }
+        prm-facet-exact .md-chips .md-chip .md-chip-remove-container .md-button prm-icon md-icon {
+          height: 24px;
+          width: 24px;
+          min-height: inherit;
+          min-width: inherit;
+          transition: none;
+          position: absolute !important;
+          top: 2px !important;
+          right: 0 !important;
+          background: transparent !important; }
+  prm-facet-exact .md-chips .md-chip .md-chip-content {
+    overflow: visible;
+    width: 100%; }
+    prm-facet-exact .md-chips .md-chip .md-chip-content strong {
+      white-space: normal;
+      margin-right: 0 !important; }
+    prm-facet-exact .md-chips .md-chip .md-chip-content strong + span {
+      -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+      margin-top: 0;
+      width: auto !important;
+      -ms-flex: 1 1 80%;
+      flex: 1 1 80%; }
+    prm-facet-exact .md-chips .md-chip .md-chip-content md-checkbox {
+      transition: none;
+      transform: none;
+      left: inherit;
+      position: inherit;
+      width: 20px;
+      cursor: default; }
+      prm-facet-exact .md-chips .md-chip .md-chip-content md-checkbox.md-focused:not([disabled]):not(.md-checked) ._md-container:before {
+        background: none; }
+  prm-facet-exact .md-chips .md-chip.wrapping-chip {
+    height: auto;
+    max-width: 100%; }
+    prm-facet-exact .md-chips .md-chip.wrapping-chip .facet-title {
+      line-height: 1.2em;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      overflow: visible;
+      white-space: normal;
+      display: -ms-flexbox;
+      display: flex;
+      margin-right: 0 !important;
+      text-align: left;
+      direction: ltr; }
+    prm-facet-exact .md-chips .md-chip.wrapping-chip .md-chip-remove-container {
+      position: inherit;
+      height: 24px;
+      border-radius: 0;
+      visibility: visible;
+      z-index: 1;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: start;
+      align-items: flex-start; }
+      prm-facet-exact .md-chips .md-chip.wrapping-chip .md-chip-remove-container .md-button {
+        position: relative;
+        top: 0; }
+
+prm-facet .sidebar-inner-wrapper {
+  margin-right: 0; }
+
+prm-facet .primo-scrollbar,
+prm-facet md-dialog-content {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%; }
+  @media only screen and (min-width: 960px) {
+    prm-facet .primo-scrollbar,
+    prm-facet md-dialog-content {
+      width: 340px;
+      max-width: 340px;
+      min-width: 340px; } }
+
+.multiselect-facet-group prm-facet-exact .section-content .md-chips .md-chip .facet-title {
+  line-height: 1.2em; }
+  .multiselect-facet-group prm-facet-exact .section-content .md-chips .md-chip .facet-title .text-number-space {
+    margin: 0 5px;
+    -ms-flex: 1 1 90%;
+    flex: 1 1 90%; }
+  .multiselect-facet-group prm-facet-exact .section-content .md-chips .md-chip .facet-title .facet-counter {
+    white-space: normal;
+    font-weight: 400;
+    -ms-flex: 1 1 10%;
+    flex: 1 1 10%; }
+
+.multiselect-facet-group prm-facet-exact .section-content.multiselect-inactive .md-chip md-checkbox {
+  transform: scaleX(1); }
+
+.multiselect-submit.is-active .multiselect-submit-inner {
+  min-width: 100%;
+  max-width: 100%;
+  width: 100%; }
+  @media only screen and (min-width: 960px) {
+    .multiselect-submit.is-active .multiselect-submit-inner {
+      min-width: 340px;
+      max-width: 340px;
+      width: 340px; } }
+
+/** remove sidebar 'refine my results' **/
+.sidebar-section.compensate-padding-left h2.sidebar-title {
+  display: none; }
+
+h2.sidebar-title {
+  font-weight: 600;
+  color: #396675; }
+
+@media (min-width: 1280px -1px) and (max-width: 1920px) {
+  .flex-lg-20,
+  .layout-lg-row > .flex-lg-20,
+  .layout-row > .flex-lg-20 {
+    -ms-flex: 0 0 340px;
+    flex: 0 0 340px;
+    max-width: 340px; } }
+
+@media (min-width: 960px -1px) and (max-width: 1280px) {
+  .flex-md-25,
+  .layout-md-row > .flex-md-25,
+  .layout-row > .flex-md-25 {
+    -ms-flex: 0 0 340px;
+    flex: 0 0 340px;
+    max-width: 340px; } }
+
+/*** fix checkbox overlap of clear filters div **/
+.multiselect-facet-group.multiselect-inactive .md-chip:hover md-checkbox, .multiselect-facet-group.multiselect-inactive .md-chip:focus md-checkbox, .multiselect-facet-group.multiselect-inactive .md-chip md-checkbox:focus {
+  z-index: 9 !important; }
+
+.multiselect-facet-group.multiselect-active .md-chip {
+  transform: translateX(10px); }
+  .multiselect-facet-group.multiselect-active .md-chip md-checkbox {
+    z-index: 9 !important; }
+
+.md-button:hover:not([disabled]) {
+  color: #fff; }
+
+.md-button:focus:not([disabled]) {
+  color: #fff; }
+
+.md-button.button-over-dark:hover:not([disabled]) {
+  color: #fff; }
+
+.md-button.button-over-dark:focus:not([disabled]) {
+  color: #fff; }
+
+.md-button.button-confirm {
+  color: #fff;
+  background-color: #0088a4; }
+  .md-button.button-confirm:hover:not([disabled]) {
+    color: #fff;
+    background-color: #396675; }
+  .md-button.button-confirm:focus:not([disabled]) {
+    color: #fff;
+    background-color: #396675; }
+  .md-button.button-confirm.hovered:not([disabled]) {
+    color: #fff;
+    background-color: #396675; }
+  .md-button.button-confirm.md-focused:not([disabled]) {
+    color: #fff;
+    background-color: #396675; }
+  .md-button.button-confirm._md-focused:not([disabled]) {
+    color: #fff;
+    background-color: #396675; }
+
+.md-button.button-as-link.link-alt-color {
+  background-color: transparent;
+  color: #0088a4; }
+
+.md-button._md-focused:not([disabled]) {
+  color: #080606;
+  background-color: rgba(128, 128, 128, 0.3); }
+
+.md-button.hovered:not([disabled]) {
+  color: #080606;
+  background-color: rgba(128, 128, 128, 0.3); }
+
+.md-button.md-focused:not([disabled]) {
+  color: #080606;
+  background-color: rgba(128, 128, 128, 0.3); }
+
+.md-button:focus:not([disabled]) {
+  color: #080606;
+  background-color: rgba(128, 128, 128, 0.3); }
+
+.md-button:hover:not([disabled]) {
+  color: #080606;
+  background-color: rgba(128, 128, 128, 0.3); }
+
+/* sign-in buttons */
+/** top bar buttons & floating buttons **/
+prm-search-bookmark-filter .md-button {
+  background-color: #0088a4 !important;
+  color: #fff !important;
+  box-shadow: none; }
+  prm-search-bookmark-filter .md-button:hover, prm-search-bookmark-filter .md-button:active, prm-search-bookmark-filter .md-button:focus, prm-search-bookmark-filter .md-button:hover:not([disabled]), prm-search-bookmark-filter .md-button:active:not([disabled]), prm-search-bookmark-filter .md-button:focus:not([disabled]) {
+    background-color: #00333e !important;
+    color: #fff !important; }
+  prm-search-bookmark-filter .md-button:visited {
+    color: #0f141a; }
+
+prm-search-bookmark-filter #fixed-buttons-holder .md-button {
+  background-color: #0088a4 !important;
+  color: #fff !important;
+  box-shadow: none; }
+  prm-search-bookmark-filter #fixed-buttons-holder .md-button:hover, prm-search-bookmark-filter #fixed-buttons-holder .md-button:active, prm-search-bookmark-filter #fixed-buttons-holder .md-button:focus, prm-search-bookmark-filter #fixed-buttons-holder .md-button:hover:not([disabled]), prm-search-bookmark-filter #fixed-buttons-holder .md-button:active:not([disabled]), prm-search-bookmark-filter #fixed-buttons-holder .md-button:focus:not([disabled]) {
+    background-color: #00333e !important;
+    color: #fff !important; }
+  prm-search-bookmark-filter #fixed-buttons-holder .md-button:visited {
+    color: #0f141a; }
+
+.darker-bg,
+prm-search-bookmark-filter .md-button {
+  background-color: #0088a4 !important;
+  color: #fff !important; }
+  .darker-bg:hover, .darker-bg:active, .darker-bg:focus, .darker-bg:hover:not([disabled]), .darker-bg:active:not([disabled]), .darker-bg:focus:not([disabled]),
+  prm-search-bookmark-filter .md-button:hover,
+  prm-search-bookmark-filter .md-button:active,
+  prm-search-bookmark-filter .md-button:focus,
+  prm-search-bookmark-filter .md-button:hover:not([disabled]),
+  prm-search-bookmark-filter .md-button:active:not([disabled]),
+  prm-search-bookmark-filter .md-button:focus:not([disabled]) {
+    background-color: #00333e !important;
+    color: #fff !important; }
+  .darker-bg:visited,
+  prm-search-bookmark-filter .md-button:visited {
+    color: #0f141a; }
+
+prm-user-area,
+prm-user-area md-fab-trigger.show-user-info:after {
+  background-color: #00738b !important;
+  color: #fff; }
+  prm-user-area:hover, prm-user-area:active, prm-user-area:focus, prm-user-area:hover:not([disabled]), prm-user-area:active:not([disabled]), prm-user-area:focus:not([disabled]),
+  prm-user-area md-fab-trigger.show-user-info:after:hover,
+  prm-user-area md-fab-trigger.show-user-info:after:active,
+  prm-user-area md-fab-trigger.show-user-info:after:focus,
+  prm-user-area md-fab-trigger.show-user-info:after:hover:not([disabled]),
+  prm-user-area md-fab-trigger.show-user-info:after:active:not([disabled]),
+  prm-user-area md-fab-trigger.show-user-info:after:focus:not([disabled]) {
+    background-color: #182a30 !important;
+    color: #fff; }
+  prm-user-area:visited,
+  prm-user-area md-fab-trigger.show-user-info:after:visited {
+    color: #0f141a; }
+
+prm-fines-after a.md-button,
+prm-messages-and-blocks-overview-after a.md-button {
+  background-color: #0088a4 !important;
+  color: #fff !important;
+  margin-left: 0; }
+  prm-fines-after a.md-button:hover, prm-fines-after a.md-button:active, prm-fines-after a.md-button:focus, prm-fines-after a.md-button:hover:not([disabled]), prm-fines-after a.md-button:active:not([disabled]), prm-fines-after a.md-button:focus:not([disabled]),
+  prm-messages-and-blocks-overview-after a.md-button:hover,
+  prm-messages-and-blocks-overview-after a.md-button:active,
+  prm-messages-and-blocks-overview-after a.md-button:focus,
+  prm-messages-and-blocks-overview-after a.md-button:hover:not([disabled]),
+  prm-messages-and-blocks-overview-after a.md-button:active:not([disabled]),
+  prm-messages-and-blocks-overview-after a.md-button:focus:not([disabled]) {
+    background-color: #00333e !important;
+    color: #fff !important; }
+  prm-fines-after a.md-button:visited,
+  prm-messages-and-blocks-overview-after a.md-button:visited {
+    color: #0f141a; }
+  prm-fines-after a.md-button.md-secondary,
+  prm-messages-and-blocks-overview-after a.md-button.md-secondary {
+    background-color: gray !important;
+    color: #fff !important; }
+    prm-fines-after a.md-button.md-secondary:hover, prm-fines-after a.md-button.md-secondary:active, prm-fines-after a.md-button.md-secondary:focus, prm-fines-after a.md-button.md-secondary:hover:not([disabled]), prm-fines-after a.md-button.md-secondary:active:not([disabled]), prm-fines-after a.md-button.md-secondary:focus:not([disabled]),
+    prm-messages-and-blocks-overview-after a.md-button.md-secondary:hover,
+    prm-messages-and-blocks-overview-after a.md-button.md-secondary:active,
+    prm-messages-and-blocks-overview-after a.md-button.md-secondary:focus,
+    prm-messages-and-blocks-overview-after a.md-button.md-secondary:hover:not([disabled]),
+    prm-messages-and-blocks-overview-after a.md-button.md-secondary:active:not([disabled]),
+    prm-messages-and-blocks-overview-after a.md-button.md-secondary:focus:not([disabled]) {
+      background-color: #4d4d4d !important;
+      color: #fff !important; }
+    prm-fines-after a.md-button.md-secondary:visited,
+    prm-messages-and-blocks-overview-after a.md-button.md-secondary:visited {
+      color: #0f141a; }
+
+button.close-button {
+  background-color: transparent;
+  transition: all 0.25s ease-out, color 0.25s ease-out; }
+  button.close-button:hover, button.close-button:active, button.close-button:focus, button.close-button:hover:not([disabled]), button.close-button:active:not([disabled]), button.close-button:focus:not([disabled]) {
+    background-color: rgba(53, 71, 90, 0.2);
+    transition: all 0.25s ease-out, color 0.25s ease-out; }
+  button.close-button:visited {
+    color: #0f141a; }
+  button.close-button prm-icon md-icon {
+    color: #fff !important; }
+    button.close-button prm-icon md-icon.md-primoExplore-theme {
+      color: #fff !important; }
+
+/** defaults ***/
+md-toolbar.default-toolbar * {
+  color: #35475a; }
+
+md-toolbar.default-toolbar *::after {
+  color: #35475a; }
+
+md-toolbar.default-toolbar *::before {
+  color: #35475a; }
+
+/** top bar **/
+prm-topbar {
+  height: 70px;
+  /** toolbar **/ }
+  prm-topbar .top-nav-bar {
+    background-color: #0088a4 !important;
+    /** top bar icons **/ }
+    prm-topbar .top-nav-bar prm-logo {
+      max-width: 250px;
+      min-width: 150px; }
+      prm-topbar .top-nav-bar prm-logo img.logo-image {
+        max-height: 25px; }
+        @media only screen and (min-width: 600px) {
+          prm-topbar .top-nav-bar prm-logo img.logo-image {
+            max-height: 30px; } }
+        @media only screen and (min-width: 820px) {
+          prm-topbar .top-nav-bar prm-logo img.logo-image {
+            max-height: 40px; } }
+        @media only screen and (min-width: 960px) {
+          prm-topbar .top-nav-bar prm-logo img.logo-image {
+            max-height: 50px; } }
+    prm-topbar .top-nav-bar prm-search-bookmark-filter .md-button {
+      color: #fff !important; }
+
+/** search bar **/
+search-bar-sub-menu button.md-button {
+  color: #35475a; }
+  search-bar-sub-menu button.md-button:hover, search-bar-sub-menu button.md-button:active, search-bar-sub-menu button.md-button:focus, search-bar-sub-menu button.md-button:hover:not([disabled]), search-bar-sub-menu button.md-button:active:not([disabled]), search-bar-sub-menu button.md-button:focus:not([disabled]) {
+    background-color: rgba(128, 128, 128, 0.3) !important; }
+  search-bar-sub-menu button.md-button:visited {
+    color: #0f141a; }
+
+/** back to search results */
+prm-back-to-search-results-button button.md-button {
+  background-color: transparent !important;
+  font-weight: 600 !important; }
+
+prm-topbar .top-nav-bar {
+  background-color: #0088a4; }
+
+prm-user-area {
+  /** top bar when login is open **/ }
+  prm-user-area md-fab-toolbar {
+    /** library account when login is open **/ }
+    prm-user-area md-fab-toolbar.md-left .md-toolbar-tools, prm-user-area md-fab-toolbar.md-right .md-toolbar-tools {
+      background-color: #0088a4; }
+    prm-user-area md-fab-toolbar ._md-fab-action-item,
+    prm-user-area md-fab-toolbar .md-fab-action-item {
+      background-color: rgba(57, 102, 117, 0.5); }
+
+/** user buttons **/
+.user-menu-button {
+  background-color: #396675; }
+
+#action_list .full-view-section-content prm-full-view-service-container .section-body prm-action-list .md-nav-bar ul._md-nav-bar-list li.md-nav-item button.md-button, .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.md-button,
+.action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.pin-button, .result-item-actions button.md-button {
+  background-color: transparent !important;
+  color: #35475a !important; }
+  #action_list .full-view-section-content prm-full-view-service-container .section-body prm-action-list .md-nav-bar ul._md-nav-bar-list li.md-nav-item button.md-button:hover, .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.md-button:hover,
+  .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.pin-button:hover, .result-item-actions button.md-button:hover, #action_list .full-view-section-content prm-full-view-service-container .section-body prm-action-list .md-nav-bar ul._md-nav-bar-list li.md-nav-item button.md-button:active, .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.md-button:active,
+  .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.pin-button:active, .result-item-actions button.md-button:active, #action_list .full-view-section-content prm-full-view-service-container .section-body prm-action-list .md-nav-bar ul._md-nav-bar-list li.md-nav-item button.md-button:focus, .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.md-button:focus,
+  .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.pin-button:focus, .result-item-actions button.md-button:focus, #action_list .full-view-section-content prm-full-view-service-container .section-body prm-action-list .md-nav-bar ul._md-nav-bar-list li.md-nav-item button.md-button:hover:not([disabled]), .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.md-button:hover:not([disabled]),
+  .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.pin-button:hover:not([disabled]), .result-item-actions button.md-button:hover:not([disabled]), #action_list .full-view-section-content prm-full-view-service-container .section-body prm-action-list .md-nav-bar ul._md-nav-bar-list li.md-nav-item button.md-button:active:not([disabled]), .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.md-button:active:not([disabled]),
+  .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.pin-button:active:not([disabled]), .result-item-actions button.md-button:active:not([disabled]), #action_list .full-view-section-content prm-full-view-service-container .section-body prm-action-list .md-nav-bar ul._md-nav-bar-list li.md-nav-item button.md-button:focus:not([disabled]), .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.md-button:focus:not([disabled]),
+  .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.pin-button:focus:not([disabled]), .result-item-actions button.md-button:focus:not([disabled]) {
+    color: #030303 !important;
+    background-color: rgba(128, 128, 128, 0.3) !important; }
+  #action_list .full-view-section-content prm-full-view-service-container .section-body prm-action-list .md-nav-bar ul._md-nav-bar-list li.md-nav-item button.md-button:visited, .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.md-button:visited,
+  .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.pin-button:visited, .result-item-actions button.md-button:visited {
+    color: #0f141a; }
+
+#action_list {
+  padding-bottom: 0;
+  margin-bottom: 0 !important; }
+  #action_list button.md-button.nav-control {
+    background: rgba(205, 205, 205, 0.3);
+    max-width: 32px !important;
+    min-width: 0 !important;
+    height: 32px;
+    font-size: 12px !important;
+    line-height: 32px !important;
+    margin: 0; }
+    #action_list button.md-button.nav-control:hover, #action_list button.md-button.nav-control:active, #action_list button.md-button.nav-control:focus, #action_list button.md-button.nav-control:hover:not([disabled]), #action_list button.md-button.nav-control:active:not([disabled]), #action_list button.md-button.nav-control:focus:not([disabled]) {
+      background-color: rgba(128, 128, 128, 0.3); }
+    #action_list button.md-button.nav-control:visited {
+      color: #0f141a; }
+  #action_list .full-view-section-content {
+    padding: 1em; }
+    @media only screen and (min-width: 600px) {
+      #action_list .full-view-section-content {
+        padding: 1em 2em 0em 2em; } }
+    #action_list .full-view-section-content prm-full-view-service-container {
+      padding: 0.5em;
+      background: #fafafa;
+      border: none;
+      display: block; }
+      @media only screen and (min-width: 600px) {
+        #action_list .full-view-section-content prm-full-view-service-container {
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-pack: justify;
+          justify-content: space-between; } }
+      #action_list .full-view-section-content prm-full-view-service-container .section-head {
+        margin: 0;
+        padding: 0; }
+        #action_list .full-view-section-content prm-full-view-service-container .section-head h4.section-title {
+          margin-top: 0px;
+          font-size: 12px;
+          color: #999 !important; }
+          @media only screen and (min-width: 600px) {
+            #action_list .full-view-section-content prm-full-view-service-container .section-head h4.section-title {
+              margin-top: 20px; } }
+      #action_list .full-view-section-content prm-full-view-service-container .section-body {
+        margin: 0;
+        padding: 0; }
+  #action_list md-divider {
+    border: 0;
+    display: none; }
+
+.action-list-content md-content {
+  background: #fafafa; }
+  .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.md-button,
+  .action-list-content md-content .md-nav-bar nav ul li.md-nav-item button.pin-button {
+    opacity: 1; }
+
+prm-search-bar {
+  background-color: #35475a; }
+  prm-search-bar .search-switch-buttons .md-button.switch-to-simple {
+    color: #fff; }
+  prm-search-bar .search-actions .md-button {
+    border-radius: 0 3px 3px 0; }
+
+toggle-institutions button.md-button {
+  width: 210px;
+  background-color: #d5eaee;
+  color: #0088a4;
+  text-transform: none !important; }
+
+prm-user-area md-fab-toolbar .md-fab-action-item .md-button:hover:not([disabled]) {
+  color: #fff; }
+
+prm-user-area md-fab-toolbar .md-fab-action-item .md-button:focus:not([disabled]) {
+  color: #fff; }
+
+prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:hover:not([disabled]) {
+  color: #fff; }
+
+prm-user-area md-fab-toolbar .md-fab-action-item md-input-container:focus:not([disabled]) {
+  color: #fff; }
+
+prm-user-area md-fab-toolbar ._md-fab-action-item .md-button:hover:not([disabled]) {
+  color: #fff; }
+
+prm-user-area md-fab-toolbar ._md-fab-action-item .md-button:focus:not([disabled]) {
+  color: #fff; }
+
+prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container:hover:not([disabled]) {
+  color: #fff; }
+
+prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container:focus:not([disabled]) {
+  color: #fff; }
+
+prm-user-area .user-menu-button .user-name {
+  color: #fff; }
+
+prm-user-area .md-button.user-menu-button:hover:not([disabled]) {
+  color: #fff; }
+
+prm-user-area .md-button.user-menu-button:focus:not([disabled]) {
+  color: #fff; }
+
+prm-personal-info md-card.default-card:last-child {
+  display: none;
+  visibility: hidden; }
+
+prm-personal-info md-card-content md-divder.card-divider.margin-bottom-medium.layout-margin {
+  display: none;
+  visibility: hidden; }
+
+prm-personal-info .card-content-section.layout-full-width.layout-wrap.layout-align-start-start.layout-row:last-of-type {
+  display: none;
+  visibility: hidden; }
+
+prm-stand-alone-login {
+  background-color: #0088a4;
+  height: 100vh;
+  display: block; }
+  prm-stand-alone-login prm-logo-after div.product-logo-local a {
+    max-width: none;
+    padding: 0;
+    text-align: center; }
+    prm-stand-alone-login prm-logo-after div.product-logo-local a img.logo-image {
+      max-width: 320px;
+      width: 80%;
+      margin: .5em auto; }
+  prm-stand-alone-login .login-card {
+    position: relative;
+    max-width: 90%;
+    min-width: 90%;
+    background-color: transparent;
+    color: #fff; }
+    prm-stand-alone-login .login-card md-dialog-content prm-login-item {
+      color: #fff;
+      max-width: 100%; }
+      prm-stand-alone-login .login-card md-dialog-content prm-login-item h3.list-item-title {
+        color: yellow !important;
+        font-weight: 600 !important;
+        max-width: 100%;
+        overflow: visible !important;
+        white-space: normal !important;
+        font-size: 1.2em !important; }
+        @media only screen and (min-width: 600px) {
+          prm-stand-alone-login .login-card md-dialog-content prm-login-item h3.list-item-title {
+            font-size: 1.6em !important; } }
+      prm-stand-alone-login .login-card md-dialog-content prm-login-item prm-icon {
+        color: #fff !important; }
+
+md-dialog.login-dialog {
+  max-width: 580px;
+  min-width: 360px; }
+
+prm-page-nav-menu {
+  background-color: transparent;
+  max-width: 100px; }
+  @media only screen and (min-width: 600px) {
+    prm-page-nav-menu {
+      right: 3% !important;
+      left: 90% !important; } }
+  @media only screen and (min-width: 820px) {
+    prm-page-nav-menu {
+      right: 2% !important;
+      left: 92% !important; } }
+  @media only screen and (min-width: 960px) {
+    prm-page-nav-menu {
+      right: 1% !important;
+      left: 94% !important; } }
+
+.hoverable-over-dark:hover:not([disabled]) {
+  color: #fff; }
+
+.hoverable-over-dark:focus:not([disabled]) {
+  color: #fff; }
+
+.diamond {
+  background-color: #f8bb17 !important; }
+
+.section-title-header {
+  color: #395575; }
+
+.bar prm-authentication .md-button.link-alt-color {
+  background-color: transparent;
+  color: #0088a4; }
+
+.bar prm-authentication .section-title prm-icon.md-button {
+  background-color: transparent;
+  color: #0088a4; }
+
+.bar.alert-bar {
+  border-color: #d5eaee;
+  background-color: #d5eaee; }
+
+.section-title {
+  font-weight: 600;
+  color: #395575 !important;
+  text-transform: uppercase; }
+  .section-title .bar prm-authentication prm-icon.md-button {
+    background-color: transparent;
+    color: #0088a4; }
+  .section-title prm-icon.md-button.button-as-link {
+    background-color: transparent;
+    color: #0088a4; }
+
+[aria-label="Tags"] {
+  display: none; }
+
+#tags {
+  display: none; }
+
+.prm-alert-border {
+  border-color: #d5eaee;
+  background-color: #d5eaee; }
+
+.__gt-xs prm-page-nav-menu {
+  left: 3em; }
+
+.__gt-xs .full-view-section-content {
+  padding: 2em; }
+
+prm-page-nav-menu {
+  position: fixed;
+  z-index: 11;
+  bottom: 7em;
+  left: 0; }
+
+#brief {
+  padding: 1em;
+  background: #fff; }
+  #brief .item-title {
+    max-width: 85%; }
+  @media only screen and (min-width: 600px) {
+    #brief {
+      padding: 0; }
+      #brief .item-title {
+        max-width: 100%; } }
+
+.full-view-section-content {
+  background-color: #fff;
+  padding: 1em; }
+  @media only screen and (min-width: 600px) {
+    .full-view-section-content {
+      padding: 1.5em; } }
+
+.__xs .full-view-inner-container {
+  padding: 0; }
+  @media only screen and (min-width: 600px) {
+    .__xs .full-view-inner-container {
+      padding: 1em 1.5em; } }
+
+prm-brief-result-container {
+  background-color: #fff; }
+
+.full-view-section {
+  padding: 0;
+  margin-bottom: 2.5em;
+  margin-top: 0; }
+
+.full-view-inner-container {
+  background-color: transparent;
+  padding: 0; }
+
+prm-main-menu[menu-type="menu"] .md-button {
+  color: #fff; }
+
+prm-icon md-icon {
+  color: #395575; }
+  prm-icon md-icon.md-primoExplore-theme {
+    color: #395575; }
+
+prm-brief-result .item-title {
+  color: #395575; }
+
+.advanced-search-backdrop.visible {
+  background-color: #35475a; }
+
+.classic-input .search-scope {
+  border-color: #d5eaee;
+  background-color: #d5eaee; }
+
+input[type='submit'].submitAsLink {
+  background-color: #0088a4;
+  color: #fff; }
+
+.__gt-md prm-page-nav-menu {
+  bottom: 5em;
+  left: 1em; }
+
+.__gt-sm prm-page-nav-menu {
+  bottom: 4em; }
+
+prm-page-nav-menu {
+  z-index: 10 !important; }
+
+.services-index-under.hide-xs {
+  display: none;
+  visibility: hidden; }
+
+.md-dialog-container {
+  background-color: rgba(128, 128, 128, 0.3); }
+
+md-dialog.light-on-dark-dialog {
+  background-color: #283c53; }
+
+md-dialog-content {
+  /** reduce weight of other libraries text **/
+  /* remove hover color from link-styled buttons */
+  /** fix for title link overlaying page selector **/ }
+  md-dialog-content .full-view-container {
+    padding: 0; }
+    @media only screen and (min-width: 600px) {
+      md-dialog-content .full-view-container {
+        padding: 2em 2em 0; } }
+  md-dialog-content prm-alma-more-inst h3.medium-uppercase-bold {
+    font-weight: 400; }
+  md-dialog-content .section-title.layout-align-start-center.layout-row {
+    display: none; }
+  md-dialog-content .md-button.neutralized-button:hover {
+    background-color: transparent; }
+  md-dialog-content button.md-button,
+  md-dialog-content a.md-primoExplore-theme {
+    z-index: 12; }
+
+prm-main-menu[menu-type=full] md-card .md-headline {
+  color: #f8bb17; }
+
+/*** remove english dropdown menu ***/
+.overlay-menu-item.layout-align-center-center.layout-row {
+  display: none; }
+
+#fixed-buttons-holder.fixed-to-top .md-button {
+  background-color: rgba(0, 136, 164, 0.5) !important;
+  z-index: 9 !important; }
+  #fixed-buttons-holder.fixed-to-top .md-button:hover, #fixed-buttons-holder.fixed-to-top .md-button:active, #fixed-buttons-holder.fixed-to-top .md-button:focus, #fixed-buttons-holder.fixed-to-top .md-button:hover:not([disabled]), #fixed-buttons-holder.fixed-to-top .md-button:active:not([disabled]), #fixed-buttons-holder.fixed-to-top .md-button:focus:not([disabled]) {
+    background-color: #005e71 !important; }
+  #fixed-buttons-holder.fixed-to-top .md-button:visited {
+    color: #0f141a; }

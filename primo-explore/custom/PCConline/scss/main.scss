@@ -1,0 +1,263 @@
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "sidebar";
+@import "buttons";
+@import "menubars";
+@import "actionlist";
+@import "searchbar";
+@import "otherinstitutions";
+@import "userarea";
+@import "login";
+@import "pagecounter";
+
+
+
+.hoverable-over-dark {
+  &:hover:not([disabled]) {
+    color: $white;
+  }
+  &:focus:not([disabled]) {
+    color: $white;
+  }
+}
+
+.diamond {
+  background-color: $color_yellow !important;
+}
+
+
+.section-title-header {
+  color: $color_medium_blue;
+}
+.bar {
+  prm-authentication {
+    .md-button.link-alt-color {
+      background-color: transparent;
+      color: $color_teal;
+    }
+    .section-title prm-icon.md-button {
+      background-color: transparent;
+      color: $color_teal;
+    }
+  }
+  &.alert-bar {
+    border-color: $color_light_blue;
+    background-color: $color_light_blue;
+  }
+}
+
+.section-title {
+
+  font-weight: 600;
+    color: $color_medium_blue !important;
+    text-transform: uppercase;
+
+  .bar prm-authentication prm-icon.md-button {
+    background-color: transparent;
+    color: $color_teal;
+  }
+  prm-icon.md-button.button-as-link {
+    background-color: transparent;
+    color: $color_teal;
+  }
+}
+
+[aria-label="Tags"] {
+  display: none;
+}
+
+#tags {
+  display: none;
+}
+
+.prm-alert-border {
+  border-color: $color_light_blue;
+  background-color: $color_light_blue;
+}
+
+.__gt-xs {
+  prm-page-nav-menu {
+    left: 3em;
+  }
+  .full-view-section-content {
+    padding: 2em;
+  }
+}
+
+prm-page-nav-menu {
+  position: fixed;
+  z-index: 11;
+  bottom: 7em;
+  left: 0;
+}
+
+#brief {
+  padding: 1em;
+  background: #fff;
+
+  .item-title {
+    max-width: 85%;
+  }
+
+  @include sm {
+    padding: 0;
+
+    .item-title {
+      max-width: 100%;
+    }
+
+  }
+}
+
+.full-view-section-content {
+  background-color: $white;
+  padding: 1em;
+
+  @include sm {
+    padding: 1.5em;
+  }
+
+}
+
+.__xs .full-view-inner-container {
+  padding: 0;
+  @include sm {
+    padding: 1em 1.5em;
+  }
+}
+
+prm-brief-result-container {
+  background-color: $white;
+}
+
+.full-view-section {
+  padding: 0;
+  margin-bottom: 2.5em;
+  margin-top: 0;
+}
+
+.full-view-inner-container {
+  background-color: transparent;
+  padding: 0;
+}
+
+
+
+prm-main-menu[menu-type="menu"] .md-button {
+  color: $white;
+}
+
+prm-icon md-icon {
+  color: $color_medium_blue;
+  &.md-primoExplore-theme {
+    color: $color_medium_blue;
+  }
+}
+
+
+prm-brief-result .item-title {
+  color: $color_medium_blue;
+}
+.advanced-search-backdrop.visible {
+  background-color: $color_dark_blue;
+}
+
+
+.classic-input .search-scope {
+  border-color: $color_light_blue;
+  background-color: $color_light_blue;
+}
+input[type='submit'].submitAsLink {
+  @extend %button;
+  background-color: $color_teal;
+  color: $white;
+  &:hover {
+    @extend %nodecoration;
+  }
+}
+
+.__gt-md prm-page-nav-menu {
+  bottom: 5em;
+  left: 1em;
+}
+.__gt-sm prm-page-nav-menu {
+  bottom: 4em;
+}
+
+prm-page-nav-menu {
+  z-index: 10 !important;
+}
+
+
+.services-index-under.hide-xs {
+  display: none;
+  visibility: hidden;
+}
+
+prm-action-list,
+.saved-query-list {
+
+  md-nav-bar .md-nav-item {
+    @extend %maxwidth100;
+  }
+
+}
+
+.md-dialog-container {
+  background-color: $color_trans_gray;
+}
+
+md-dialog.light-on-dark-dialog {
+  background-color: darken($color_medium_blue, 10%);
+}
+
+md-dialog-content {
+  .full-view-container {
+    padding: 0;
+    @include sm {
+      padding: 2em 2em 0;
+  }
+}
+
+  /** reduce weight of other libraries text **/
+  prm-alma-more-inst h3.medium-uppercase-bold {
+    font-weight: 400;
+  }
+
+
+  .section-title.layout-align-start-center.layout-row {
+    display: none;
+  }
+
+  /* remove hover color from link-styled buttons */
+  .md-button.neutralized-button:hover {
+    background-color: transparent;
+  }
+
+  /** fix for title link overlaying page selector **/
+
+  button.md-button,
+  a.md-primoExplore-theme {
+    z-index: 12;
+  }
+}
+
+prm-main-menu[menu-type=full] {
+  md-card .md-headline {
+    color: $color_yellow;
+  }
+}
+
+/*** remove english dropdown menu ***/
+.overlay-menu-item.layout-align-center-center.layout-row {
+  display: none;
+}
+
+#fixed-buttons-holder.fixed-to-top .md-button {
+  background-color: rgba($color_teal, .5) !important;
+  z-index: 9 !important;
+  @include hover {
+    background-color: rgba(darken($color_teal, 10%), 1) !important;
+  }
+}

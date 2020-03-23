@@ -1,0 +1,431 @@
+.sidebar {
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+
+  @include lg {
+
+    width: $sidebar-width;
+    max-width: $sidebar-width;
+    min-width: $sidebar-width;
+
+  }
+
+  .md-button {
+    background-color: $color_alto_approx !important;
+    @include hover {
+      @extend %linkhover;
+    }
+
+    &.md-primary {
+      @extend %primary_button;
+    }
+
+  }
+
+  .multiselect-facet-group.multiselect-active {
+    .md-chip {
+      transform: none !important;
+
+      .md-chip-content {
+
+      }
+
+    }
+  }
+
+  .sidebar-header {
+    color: $color_medium_blue;
+  }
+
+}
+
+/** remove left padding on facet row **/
+.section-content {
+  .md-chips {
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: .95em;
+    padding: 0;
+
+    .md-chip {
+      justify-content: space-between;
+      line-height: inherit;
+
+      &.wrapping-chip {
+        height: auto;
+        max-width: 100%;
+        margin: 0 0 5px 0 !important;
+
+        .md-chip-remove-container {
+          position: relative;
+          height: 28px;
+          width: 28px;
+          border-radius: 0;
+          visibility: hidden;
+          z-index: 1;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-align: start;
+          align-items: flex-start;
+          right: 0;
+
+          .md-button {
+            position: relative;
+            height: 28px;
+            top: 0;
+            visibility: visible !important;
+          }
+
+        }
+
+        .md-chip-content {
+          padding-left: 0;
+          justify-content: space-between;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: inherit;
+          //background: lightblue;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+
+/* wrap overflow text in facets */
+
+prm-facet-exact {
+
+  .md-chips {
+    .md-chip {
+
+      line-height: normal;
+      height: auto;
+
+      .facet-title {
+        line-height: 1.2em;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        margin-bottom: 0;
+        overflow: visible;
+        white-space: normal;
+        display: -ms-flexbox;
+        display: flex;
+        margin-right: 0px !important;
+        text-align: left;
+        direction: ltr;
+        flex: 1;
+        justify-content: flex-start;
+        width: auto;
+        box-sizing: border-box;
+        //background: pink;
+      }
+
+      .md-chip-content {
+
+        overflow: visible;
+        margin-bottom: 0;
+        width: 100%;
+
+        strong {
+          white-space: normal;
+          overflow: visible;
+        }
+
+        md-checkbox {
+          height: 24px;
+          transition: none;
+          transform: none;
+          left: 0;
+          width: 20px;
+          cursor: default;
+        }
+
+      }
+
+      .md-chip-remove-container {
+        height: 24px;
+        align-items: center;
+        align-self: center;
+        top: 0;
+      }
+      strong + span {
+        margin-left: auto;
+        align-self: center;
+      }
+
+      .button-exclude._md-focused:not([disabled]),
+      .button-exclude.hovered:not([disabled]),
+      .button-exclude.md-focused:not([disabled]),
+      .button-exclude:focus:not([disabled]),
+      .button-exclude:hover:not([disabled]) {
+        background: none !important;
+        opacity: 1;
+      }
+
+      .facet-title {
+        color: $color_dark_gray;
+        margin-right: 0 !important;
+        overflow: hidden;
+        padding-left: 1em;
+        padding-right: .35em;
+      }
+
+      .facet-title+span {
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+      }
+
+
+      .md-chip-remove-container {
+        left: 0;
+
+        /** icon on facet **/
+
+        .md-button {
+          background: none !important;
+          opacity: 1 !important;
+          color: $color_medium_gray !important;
+          @include hover {
+            opacity: 1;
+            background: none;
+            color: $color_orange !important;
+          }
+
+          &.md-icon-button {
+            margin: 0 6px;
+            height: 24px;
+            min-width: 0;
+            line-height: 24px;
+            padding: 0;
+            width: 24px;
+            border-radius: 0;
+          }
+
+          prm-icon {
+            background: transparent;
+
+            @include hover {
+              background: transparent !important;
+            }
+
+            md-icon {
+              height: 24px;
+              width: 24px;
+              min-height: inherit;
+              min-width: inherit;
+              transition: none;
+              position: absolute !important;
+              top: 2px !important;
+              right: 0 !important;
+              background: transparent !important;
+            }
+          }
+        }
+      }
+      .md-chip-content {
+        overflow: visible;
+        width: 100%;
+
+        strong {
+          white-space: normal;
+          margin-right: 0 !important;
+        }
+
+        strong+span {
+          align-self: start;
+          margin-top: 0;
+          width: auto !important;
+          flex: 1 1 80%;
+        }
+
+        md-checkbox {
+          transition: none;
+          transform: none;
+          left: inherit;
+          position: inherit;
+          width: 20px;
+          cursor: default;
+
+          &.md-focused:not([disabled]):not(.md-checked) {
+            ._md-container:before {
+              background: none;
+            }
+          }
+
+
+        }
+
+      }
+
+      /** override defaults for facet icon **/
+      &.wrapping-chip {
+          height: auto;
+          max-width: 100%;
+
+        .facet-title {
+          line-height: 1.2em;
+          padding-top: 3px;
+          padding-bottom: 3px;
+          overflow: visible;
+          white-space: normal;
+          display: -ms-flexbox;
+          display: flex;
+          margin-right: 0 !important;
+          text-align: left;
+          direction: ltr;
+        }
+
+        .md-chip-remove-container {
+          position: inherit;
+          height: 24px;
+          border-radius: 0;
+          visibility: visible;
+          z-index: 1;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-align: start;
+          align-items: flex-start;
+          //background: blue;
+          .md-button {
+              position: relative;
+              top: 0;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+
+prm-facet {
+
+  .sidebar-inner-wrapper {
+    margin-right: 0;
+  }
+
+  .primo-scrollbar,
+  md-dialog-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+
+    @include lg {
+
+      width: $sidebar-width;
+      max-width: $sidebar-width;
+      min-width: $sidebar-width;
+
+    }
+
+  }
+}
+
+
+
+
+.multiselect-facet-group {
+
+  prm-facet-exact {
+
+    .section-content {
+      .md-chips {
+        .md-chip {
+          .facet-title {
+            line-height: 1.2em;
+             .text-number-space {
+              margin: 0 5px;
+              //background: red;
+              flex: 1 1 90%;
+            }
+
+            .facet-counter {
+              white-space: normal;
+              font-weight: 400;
+              //background: green;
+              flex: 1 1 10%;
+            }
+
+          }
+
+        }
+      }
+
+      &.multiselect-inactive .md-chip md-checkbox {
+        transform: scaleX(1);
+      }
+
+    }
+  }
+}
+
+.multiselect-submit.is-active {
+
+  .multiselect-submit-inner {
+
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+
+    @include lg {
+
+      min-width: $sidebar-width;
+      max-width: $sidebar-width;
+      width: $sidebar-width;
+
+    }
+  }
+
+}
+
+/** remove sidebar 'refine my results' **/
+.sidebar-section.compensate-padding-left h2.sidebar-title {
+  display: none;
+}
+
+h2.sidebar-title {
+  font-weight: 600;
+  color: $color_dark_teal;
+}
+
+@media (min-width: $break-xl -1px) and (max-width: $break-xxl) {
+  .flex-lg-20,
+  .layout-lg-row>.flex-lg-20,
+  .layout-row>.flex-lg-20 {
+    flex: 0 0 $sidebar-width;
+    max-width: $sidebar-width;
+  }
+}
+
+@media (min-width: $break-lg -1px ) and (max-width: $break-xl) {
+  .flex-md-25,
+  .layout-md-row > .flex-md-25,
+  .layout-row > .flex-md-25 {
+    flex: 0 0 $sidebar-width;
+    max-width: $sidebar-width;
+  }
+}
+
+/*** fix checkbox overlap of clear filters div **/
+.multiselect-facet-group {
+  &.multiselect-inactive {
+    .md-chip {
+      &:hover md-checkbox, &:focus md-checkbox, md-checkbox:focus {
+        z-index: 9 !important;
+      }
+    }
+  }
+  &.multiselect-active {
+    .md-chip {
+      transform: translateX(10px);
+      md-checkbox {
+        z-index: 9 !important;
+      }
+    }
+  }
+}

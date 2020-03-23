@@ -1,0 +1,22 @@
+<md-card class="default-card zero-margin _md md-primoExplore-theme">
+  <md-card-title>
+    <md-card-title-text>
+      <span translate="" class="md-headline">No records found</span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-content>
+    <p>
+      <span>Your search returned 0 results. Try one of the options below:</span>
+    </p>
+    <ul>
+      <li><a ng-href="https://scholar.google.com/scholar?q=dogs" target="_blank" class="md-primoExplore-theme" href="https://scholar.google.com/scholar?q={{ $ctrl.parentCtrl.term }}">
+        <img ng-src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/200px-Google_%22G%22_Logo.svg.png" width="22" height="22" style="vertical-align:middle;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/200px-Google_%22G%22_Logo.svg.png"> Google Scholar
+      </a>
+      </li>
+      <li>
+        <img ng-src="https://raw.githubusercontent.com/alliance-pcsg/primo-explore-external-search/master/worldcat-logo.png" width="22" height="22" style="vertical-align:middle;" src="https://raw.githubusercontent.com/alliance-pcsg/primo-explore-external-search/master/worldcat-logo.png">
+        <a ng-href="https://www.worldcat.org/search?q={{ $ctrl.parentCtrl.term }}">Search WorldCat for items in nearby libraries</a></li>
+    </ul>
+  </md-card-content>
+</md-card>
+

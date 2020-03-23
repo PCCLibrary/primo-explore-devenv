@@ -1,0 +1,74 @@
+
+prm-user-area {
+  md-fab-toolbar {
+    .md-fab-action-item {
+      .md-button {
+        &:hover:not([disabled]) {
+          color: $white;
+        }
+        &:focus:not([disabled]) {
+          color: $white;
+        }
+      }
+      md-input-container {
+        &:hover:not([disabled]) {
+          color: $white;
+        }
+        &:focus:not([disabled]) {
+          color: $white;
+        }
+      }
+    }
+    ._md-fab-action-item {
+      .md-button {
+        &:hover:not([disabled]) {
+          color: $white;
+        }
+        &:focus:not([disabled]) {
+          color: $white;
+        }
+      }
+      md-input-container {
+        &:hover:not([disabled]) {
+          color: $white;
+        }
+        &:focus:not([disabled]) {
+          color: $white;
+        }
+      }
+    }
+  }
+  .user-menu-button .user-name {
+    color: $white;
+  }
+  .md-button.user-menu-button {
+    &:hover:not([disabled]) {
+      color: $white;
+    }
+    &:focus:not([disabled]) {
+      color: $white;
+    }
+  }
+}
+
+
+prm-personal-info {
+  md-card.default-card {
+    &:last-child {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  md-card-content {
+    md-divder.card-divider.margin-bottom-medium.layout-margin {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  .card-content-section.layout-full-width.layout-wrap.layout-align-start-start.layout-row {
+    &:last-of-type {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}

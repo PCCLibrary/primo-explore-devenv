@@ -1,0 +1,153 @@
+.md-button {
+
+  &:hover:not([disabled]) {
+    color: $white;
+  }
+  &:focus:not([disabled]) {
+    color: $white;
+  }
+
+  &.button-over-dark {
+    &:hover:not([disabled]) {
+      color: $white;
+    }
+    &:focus:not([disabled]) {
+      color: $white;
+    }
+  }
+  &.button-confirm {
+    color: $white;
+    background-color: $color_teal;
+    &:hover:not([disabled]) {
+      color: $white;
+      background-color: $color_dark_teal;
+    }
+    &:focus:not([disabled]) {
+      color: $white;
+      background-color: $color_dark_teal;
+    }
+    &.hovered:not([disabled]) {
+      color: $white;
+      background-color: $color_dark_teal;
+    }
+    &.md-focused:not([disabled]) {
+      color: $white;
+      background-color: $color_dark_teal;
+    }
+    &._md-focused:not([disabled]) {
+      color: $white;
+      background-color: $color_dark_teal;
+    }
+  }
+  &.button-as-link.link-alt-color {
+    background-color: transparent;
+    color: $color_teal;
+  }
+  &._md-focused:not([disabled]) {
+    color: $color_dark_gray;
+    background-color: $color_trans_gray;
+  }
+  &.hovered:not([disabled]) {
+    color: $color_dark_gray;
+    background-color: $color_trans_gray;
+  }
+  &.md-focused:not([disabled]) {
+    color: $color_dark_gray;
+    background-color: $color_trans_gray;
+  }
+  &:focus:not([disabled]) {
+    color: $color_dark_gray;
+    background-color: $color_trans_gray;
+  }
+  &:hover:not([disabled]) {
+    color: $color_dark_gray;
+    background-color: $color_trans_gray;
+  }
+}
+
+/* sign-in buttons */
+prm-authentication {
+  button.md-button[aria-label="Sign in"] {
+    @extend %primary_button;
+    @extend %sm_button_padding;
+
+    span[translate="getit.signin_link.sign_in"] {
+      @extend %sm_button_padding;
+    }
+  }
+
+}
+
+/** top bar buttons & floating buttons **/
+prm-search-bookmark-filter {
+
+  .md-button {
+    @include button($color_teal, $white);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  #fixed-buttons-holder {
+    .md-button {
+      @include button($color_teal, $white);
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.darker-bg,
+prm-search-bookmark-filter .md-button {
+
+  @include button();
+
+  //background-color: $color_dark_teal !important;
+  //color: $white;
+  //
+  //@include hover {
+  //  background-color: darken($color_dark_teal, 20%) !important;
+  //  color: $white;
+  //}
+}
+
+prm-user-area,
+prm-user-area md-fab-trigger.show-user-info:after {
+  background-color: darken($color_teal, 5%) !important;
+  color: $white;
+
+  @include hover {
+    background-color: darken($color_dark_teal, 20%) !important;
+    color: $white;
+  }
+}
+prm-fines-after,
+prm-messages-and-blocks-overview-after {
+  a.md-button {
+    @include button($color_teal, $white);
+    margin-left: 0;
+
+    &.md-secondary {
+      @include button(lighten($color_medium_gray, 10%), $white);
+    }
+
+  }
+}
+
+button.close-button {
+  background-color: transparent;
+  transition: all 0.25s ease-out, color 0.25s ease-out;
+
+  @include hover {
+    background-color: rgba($color_dark_blue, .2);
+    transition: all 0.25s ease-out, color 0.25s ease-out;
+  }
+
+  prm-icon md-icon {
+    color: $white !important;
+    &.md-primoExplore-theme {
+      color: $white !important;
+    }
+  }
+}
